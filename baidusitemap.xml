@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.zjohnson.top/Bioinformation/RNA-seq/Fastp.html</loc>
-    <lastmod>2018-12-02T02:51:04.786Z</lastmod>
+    <loc>https://www.zjohnson.top/RNA-seq/HISAT2.html</loc>
+    <lastmod>2018-12-12T14:29:00.451Z</lastmod>
+  </url>  <url>
+    <loc>https://www.zjohnson.top/RNA-seq/Fastp.html</loc>
+    <lastmod>2018-12-11T13:21:21.695Z</lastmod>
   </url>  <url>
     <loc>https://www.zjohnson.top/Hexo/hello-world.html</loc>
     <lastmod>2018-11-23T11:26:08.378Z</lastmod>
