@@ -111,25 +111,25 @@
 
 
 
-  <meta name="description" content="爱Python的生信人">
-<meta name="keywords" content="ZJohnson,Python,生信,博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://www.zjohnson.top/about/index.html">
+  <meta name="description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowti2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
+<meta name="keywords" content="Alignment,Mapping">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alignment software -- HISAT2">
+<meta property="og:url" content="https://www.zjohnson.top/RNA-seq/HISAT2.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
-<meta property="og:description" content="爱Python的生信人">
+<meta property="og:description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowti2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-17T14:58:21.931Z">
+<meta property="og:updated_time" content="2018-12-13T04:31:43.458Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="爱Python的生信人">
+<meta name="twitter:title" content="Alignment software -- HISAT2">
+<meta name="twitter:description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowti2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.zjohnson.top/about/">
+  <link rel="canonical" href="https://www.zjohnson.top/RNA-seq/HISAT2.html">
 
 
 
@@ -139,7 +139,7 @@
   };
 </script>
 
-  <title>关于 | ZJohnsonの海马体</title>
+  <title>Alignment software -- HISAT2 | ZJohnsonの海马体</title>
   
 
 
@@ -297,7 +297,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -326,28 +326,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -396,48 +374,298 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.zjohnson.top/RNA-seq/HISAT2.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZJohnson">
+      <meta itemprop="description" content="爱Python的生信人">
+      <meta itemprop="image" content="https://www.cnblogs.com/images/cnblogs_com/johnsonzzz/1321540/t_t_touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZJohnsonの海马体">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">关于</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">Alignment software -- HISAT2
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-11 20:44:16" itemprop="dateCreated datePublished" datetime="2018-12-11T20:44:16+08:00">2018-12-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-13 12:31:43" itemprop="dateModified" datetime="2018-12-13T12:31:43+08:00">2018-12-13</time>
+              
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/RNA-seq/" itemprop="url" rel="index"><span itemprop="name">RNA-seq</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/RNA-seq/HISAT2.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/RNA-seq/HISAT2.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowti2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。<br><a id="more"></a><br>官网：<a href="https://ccb.jhu.edu/software/hisat2/index.shtml" rel="external nofollow noopener noreferrer" target="_blank">HISAT2</a></p>
+<hr>
+<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><ul>
+<li>源码编译</li>
+</ul>
+<ol>
+<li>下载：<a href="http://ccb.jhu.edu/software/hisat2/dl/hisat2-2.1.0-source.zip" rel="external nofollow noopener noreferrer" target="_blank">Source code</a></li>
+<li>解压 hisat2-2.1.0-source.zip</li>
+<li>切换到解压目录</li>
+<li>编译：目录下 make</li>
+<li>将 HISAT2 加入环境变量</li>
+</ol>
+<ul>
+<li>二进制文件</li>
+</ul>
+<ol>
+<li>下载：<a href="http://ccb.jhu.edu/software/hisat2/dl/hisat2-2.1.0-Linux_x86_64.zip" rel="external nofollow noopener noreferrer" target="_blank">Binary（Linux_x86_64）</a></li>
+<li>解压 hisat2-2.1.0-Linux_x86_64.zip<h2 id="建立索引"><a href="#建立索引" class="headerlink" title="建立索引"></a>建立索引</h2></li>
+</ol>
+<ul>
+<li>先建立基因组、转录组、SNP的索引文件，再建立其索引</li>
+</ul>
+<ol>
+<li><p>建立基因组的索引文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extract_exons.py Homo_sapiens.GRCh38.83.chr.gtf &gt; genome.exon</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立转录组的索引文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extract_splice_sites.py Homo_sapiens.GRCh38.83.chr.gtf &gt; genome.ss</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立SNP的索引文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extract_snps.py snp142Common.txt &gt; genome.snp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立索引：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hisat2-build -p 4 genome.fa --snp genome.snp --ss genome.ss --exon genome.exon genome_snp_tran</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>注： -p 指定线程数，genome_snp_tran为索引的名称</p>
+<h2 id="比对"><a href="#比对" class="headerlink" title="比对"></a>比对</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hisat2 -p 16 -x ./grch38_tran/genome_tran -1 SRR534293_1.fastq -2 SRR534293_2.fastq –S SRR534293.sam</span><br></pre></td></tr></table></figure>
+<p>注： -p 线程数。-1 fastq文件，-2 另一端fastq文件（支持gzip文件）。-S 输出的SAM文件。</p>
+<h2 id="结合samtools"><a href="#结合samtools" class="headerlink" title="结合samtools"></a>结合samtools</h2><p>HISAT2通过管道符（|）与samtools结合，将HISAT2输出的SAM文件排序、转化为BAM文件，加速分析流程、节约硬盘空间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hisat2 -p 4 -x index/genome -1 in/out.E10_1.fq.gz -2 in/out.E10_2.fq.gz | samtools sort -n -o out/E10.sorted.bam</span><br></pre></td></tr></table></figure></p>
+<h2 id="批量化处理"><a href="#批量化处理" class="headerlink" title="批量化处理"></a>批量化处理</h2><p>借助bash，批量化处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">for i in 10 11; do</span><br><span class="line">    &#123;</span><br><span class="line">    hisat2-2.1.0/hisat2 -p 4 -x index/genome -1 in/out.E$&#123;i&#125;_1.fq.gz -2 in/out.E$&#123;i&#125;_2.fq.gz | samtools sort -n -o out/E$&#123;i&#125;.sorted.bam</span><br><span class="line">    &#125;;</span><br><span class="line">done</span><br><span class="line">wait</span><br></pre></td></tr></table></figure></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li>官网：<a href="https://ccb.jhu.edu/software/hisat2/index.shtml" rel="external nofollow noopener noreferrer" target="_blank">HISAT2</a></li>
+<li><a href="https://blog.csdn.net/qq_40280759/article/details/80552193" rel="external nofollow noopener noreferrer" target="_blank">比对软件hisat2的使用</a></li>
+<li><a href="https://blog.csdn.net/ygyxl/article/details/74375031" rel="external nofollow noopener noreferrer" target="_blank">HISAT2-StringTie-Ballgown有参转录组数据分析</a></li>
+<li><a href="https://www.jianshu.com/p/479c7b576e6f" rel="external nofollow noopener noreferrer" target="_blank">RNA-seq(5):序列比对：Hisat2</a></li>
+</ol>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="https://www.cnblogs.com/images/cnblogs_com/johnsonzzz/1321609/o_1542945135618.jpg" alt="ZJohnson wechat" style="width: 200px; max-width: 100%;">
+    <div>扫一扫，领红包！</div>
+</div>
+
+      </div>
+    
+
+    
+       
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>暖一下</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://www.cnblogs.com/images/cnblogs_com/johnsonzzz/1321609/t_wx.png" alt="ZJohnson 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://www.cnblogs.com/images/cnblogs_com/johnsonzzz/1321609/t_qq.jpg" alt="ZJohnson 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Alignment/" rel="tag"># Alignment</a>
+          
+            <a href="/tags/Mapping/" rel="tag"># Mapping</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/RNA-seq/Fastp.html" rel="next" title="Quality control -- Fastp">
+                <i class="fa fa-chevron-left"></i> Quality control -- Fastp
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -460,8 +688,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -572,6 +809,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载安装"><span class="nav-number">2.</span> <span class="nav-text">下载安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立索引"><span class="nav-number">3.</span> <span class="nav-text">建立索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比对"><span class="nav-number">4.</span> <span class="nav-text">比对</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结合samtools"><span class="nav-number">5.</span> <span class="nav-text">结合samtools</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批量化处理"><span class="nav-number">6.</span> <span class="nav-text">批量化处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
