@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.zjohnson.top/RNA-seq/DESeq2.html</loc>
+    <loc>https://www.zjohnson.top/RNA-seq/GO-&-KEGG.html</loc>
     
-    <lastmod>2018-12-20T11:58:32.190Z</lastmod>
+    <lastmod>2018-12-20T14:07:44.427Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.zjohnson.top/RNA-seq/GO-&-KEGG.html</loc>
+    <loc>https://www.zjohnson.top/about/index.html</loc>
     
-    <lastmod>2018-12-20T09:25:29.678Z</lastmod>
+    <lastmod>2018-12-20T13:16:13.596Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.zjohnson.top/RNA-seq/DESeq2.html</loc>
+    
+    <lastmod>2018-12-20T11:58:32.190Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://www.zjohnson.top/tags/index.html</loc>
     
     <lastmod>2018-11-17T14:58:25.785Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.zjohnson.top/about/index.html</loc>
-    
-    <lastmod>2018-11-17T14:58:21.931Z</lastmod>
     
   </url>
   

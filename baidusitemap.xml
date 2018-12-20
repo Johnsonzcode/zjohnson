@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.zjohnson.top/RNA-seq/GO-&-KEGG.html</loc>
+    <lastmod>2018-12-20T14:07:44.427Z</lastmod>
+  </url>  <url>
     <loc>https://www.zjohnson.top/RNA-seq/DESeq2.html</loc>
     <lastmod>2018-12-20T11:58:32.190Z</lastmod>
-  </url>  <url>
-    <loc>https://www.zjohnson.top/RNA-seq/GO-&-KEGG.html</loc>
-    <lastmod>2018-12-20T09:25:29.678Z</lastmod>
   </url>  <url>
     <loc>https://www.zjohnson.top/RNA-seq/HTSeq-count.html</loc>
     <lastmod>2018-12-19T13:02:43.042Z</lastmod>

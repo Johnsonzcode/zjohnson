@@ -111,18 +111,24 @@
 
 
 
-  <meta name="description" content="前言">
+  <meta name="description" content="前言GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。">
 <meta name="keywords" content="Enrichment analysis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Enrichment analysis of GO &amp; KEGG">
 <meta property="og:url" content="https://www.zjohnson.top/RNA-seq/GO-&-KEGG.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
-<meta property="og:description" content="前言">
+<meta property="og:description" content="前言GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-20T09:25:29.678Z">
+<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS1.jpeg">
+<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS2.png">
+<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS3.jpeg">
+<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS4.jpeg">
+<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/webgestalt.png">
+<meta property="og:updated_time" content="2018-12-20T14:07:44.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Enrichment analysis of GO &amp; KEGG">
-<meta name="twitter:description" content="前言">
+<meta name="twitter:description" content="前言GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。">
+<meta name="twitter:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS1.jpeg">
 
 
 
@@ -430,7 +436,7 @@
                 
               
 
-              <time title="创建时间：2018-12-20 16:23:30 / 修改时间：17:25:29" itemprop="dateCreated datePublished" datetime="2018-12-20T16:23:30+08:00">2018-12-20</time>
+              <time title="创建时间：2018-12-20 16:23:30 / 修改时间：22:07:44" itemprop="dateCreated datePublished" datetime="2018-12-20T16:23:30+08:00">2018-12-20</time>
             
 
             
@@ -496,7 +502,27 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。<br><a id="more"></a></p>
+<h2 id="在线分析"><a href="#在线分析" class="headerlink" title="在线分析"></a>在线分析</h2><p>分析方式有很多，例如：神包 clusterProfiler，DAVID，KOBAS，webgestalt<br>这里分别使用 KOBAS 和 webgestalt</p>
+<h3 id="KOBAS"><a href="#KOBAS" class="headerlink" title="KOBAS"></a>KOBAS</h3><p><a href="http://kobas.cbi.pku.edu.cn/anno_iden.php" rel="external nofollow noopener noreferrer" target="_blank">KOBAS</a></p>
+<ol>
+<li>输入id：<br>选择 id 类型、输入物种、输入id：<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS1.jpeg" alt="KOBAS：输入id"></li>
+<li>选择分析类型：<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS2.png" alt="KOBAS：选择分析类型"></li>
+<li>结果：<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS3.jpeg" alt="KOBAS：结果"></li>
+<li>查看：<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS4.jpeg" alt="KOBAS：查看"><blockquote>
+<p>我点击通路名称时，得到404，可能是偶然因素</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="Webgestalt"><a href="#Webgestalt" class="headerlink" title="Webgestalt"></a>Webgestalt</h3><p><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/webgestalt.png" alt="WSAT"><br>选择物种、分析方式、数据库、输入 ID 类型、参考序列</p>
+<blockquote>
+<p>分析方式 ORA 或者 GSEA<br>当选择数据库为 pathway，再选 KEGG 时，可做 KEGG 通路富集分析<br>参考序列可自定义上传</p>
+</blockquote>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="http://www.sohu.com/a/259564063_653813" rel="external nofollow noopener noreferrer" target="_blank">GO 和 KEGG 的区别 | GO KEGG数据库用法 | 基因集功能注释 | 代谢通路富集</a></li>
+<li><a href="http://www.cnblogs.com/leezx/p/6297593.html" rel="external nofollow noopener noreferrer" target="_blank">零基础的小白如何自己做GO/KEGG分析？</a></li>
+</ol>
+
       
     </div>
 
@@ -766,7 +792,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在线分析"><span class="nav-number">2.</span> <span class="nav-text">在线分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#KOBAS"><span class="nav-number">2.1.</span> <span class="nav-text">KOBAS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Webgestalt"><span class="nav-number">2.2.</span> <span class="nav-text">Webgestalt</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
