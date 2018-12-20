@@ -1,4 +1,5 @@
-https://www.zjohnson.top/RNA-seq/HTSeq.html
+https://www.zjohnson.top/RNA-seq/DESeq2.html
+https://www.zjohnson.top/RNA-seq/HTSeq-count.html
 https://www.zjohnson.top/RNA-seq/HISAT2.html
 https://www.zjohnson.top/RNA-seq/Fastp.html
 https://www.zjohnson.top/Hexo/hello-world.html

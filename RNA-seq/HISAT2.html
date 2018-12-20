@@ -114,14 +114,14 @@
   <meta name="description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
 <meta name="keywords" content="Alignment,Mapping">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Alignment software -- HISAT2">
+<meta property="og:title" content="Mapping -- HISAT2">
 <meta property="og:url" content="https://www.zjohnson.top/RNA-seq/HISAT2.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
 <meta property="og:description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-13T09:07:18.345Z">
+<meta property="og:updated_time" content="2018-12-19T12:50:26.962Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alignment software -- HISAT2">
+<meta name="twitter:title" content="Mapping -- HISAT2">
 <meta name="twitter:description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
 
 
@@ -139,7 +139,7 @@
   };
 </script>
 
-  <title>Alignment software -- HISAT2 | ZJohnsonの海马体</title>
+  <title>Mapping -- HISAT2 | ZJohnsonの海马体</title>
   
 
 
@@ -405,7 +405,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Alignment software -- HISAT2
+          <h1 class="post-title" itemprop="name headline">Mapping -- HISAT2
               
             
           </h1>
@@ -447,7 +447,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-13 17:07:18" itemprop="dateModified" datetime="2018-12-13T17:07:18+08:00">2018-12-13</time>
+                <time title="修改时间：2018-12-19 20:50:26" itemprop="dateModified" datetime="2018-12-19T20:50:26+08:00">2018-12-19</time>
               
             
           </span>
@@ -527,7 +527,7 @@
 <li>下载：<a href="http://ccb.jhu.edu/software/hisat2/dl/hisat2-2.1.0-Linux_x86_64.zip" rel="external nofollow noopener noreferrer" target="_blank">Binary（Linux_x86_64）</a></li>
 <li>解压 hisat2-2.1.0-Linux_x86_64.zip，包含下面用到的文件（hisat2、xx.py、hisat2-build等）</li>
 </ol>
-<h2 id="建立索引"><a href="#建立索引" class="headerlink" title="建立索引"></a>建立索引</h2><p>先建立基因组、转录组、SNP的索引文件，再建立其索引（以下代码在终端中运行，注意你的参考基因组等文件存放位置可能与我不同）</p>
+<h2 id="建立索引"><a href="#建立索引" class="headerlink" title="建立索引"></a>建立索引</h2><p>需要参考序列（注释文件）。先建立基因组、转录组、SNP的索引文件，再建立其索引（以下代码在终端中运行，注意你的参考基因组等文件存放位置可能与我不同）。</p>
 <ol>
 <li><p>建立基因组的索引文件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd hisat2-2.1.0-Linux_x86_64</span><br><span class="line">extract_exons.py Homo_sapiens.GRCh38.83.chr.gtf &gt; genome.exon</span><br></pre></td></tr></table></figure>
@@ -542,7 +542,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hisat2-build -p 4 genome.fa --snp genome.snp --ss genome.ss --exon genome.exon genome_snp_tran</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>注： -p 指定线程数，genome_snp_tran为索引的名称</p>
+<blockquote>
+<p>-p 指定线程数，genome_snp_tran 为索引的名称<br>在第四步时，如果没有前三步会自动建立起 exon、snp、splice sites 文件及其索引，但是提前建立会提高分析效率<br>前三步在过程中会占用一定的磁盘空间，我的磁盘空间有所不足，所以我选择直接采用第四步，有条件的尽量。所以注释文件可不下载</p>
+</blockquote>
 <h2 id="比对"><a href="#比对" class="headerlink" title="比对"></a>比对</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hisat2 -p 16 -x ./grch38_tran/genome_tran -1 SRR534293_1.fastq -2 SRR534293_2.fastq –S SRR534293.sam</span><br></pre></td></tr></table></figure>
 <p>注： -p 线程数。-1 fastq文件，-2 另一端fastq文件（支持gzip文件）。-S 输出的SAM文件。</p>
 <h2 id="结合samtools"><a href="#结合samtools" class="headerlink" title="结合samtools"></a>结合samtools</h2><p>HISAT2通过管道符（|）与samtools结合，将HISAT2输出的SAM文件排序、转化为BAM文件，加速分析流程、节约硬盘空间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hisat2 -p 4 -x index/genome -1 in/out.E10_1.fq.gz -2 in/out.E10_2.fq.gz | samtools sort -n -o \</span><br><span class="line">out/E10.sorted.bam</span><br></pre></td></tr></table></figure></p>
@@ -638,8 +640,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/RNA-seq/HTSeq.html" rel="prev" title="Reads count -- HTSeq">
-                Reads count -- HTSeq <i class="fa fa-chevron-right"></i>
+              <a href="/RNA-seq/HTSeq-count.html" rel="prev" title="Gene expression levels analysis -- HTSeq-count">
+                Gene expression levels analysis -- HTSeq-count <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -717,7 +719,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -761,7 +763,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

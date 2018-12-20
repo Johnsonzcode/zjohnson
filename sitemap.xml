@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.zjohnson.top/RNA-seq/HTSeq.html</loc>
+    <loc>https://www.zjohnson.top/RNA-seq/DESeq2.html</loc>
     
-    <lastmod>2018-12-14T13:53:38.210Z</lastmod>
+    <lastmod>2018-12-20T07:40:18.177Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.zjohnson.top/RNA-seq/HTSeq-count.html</loc>
+    
+    <lastmod>2018-12-19T13:02:43.042Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.zjohnson.top/RNA-seq/HISAT2.html</loc>
     
-    <lastmod>2018-12-13T09:07:18.345Z</lastmod>
+    <lastmod>2018-12-19T12:50:26.962Z</lastmod>
     
   </url>
   
