@@ -1973,7 +1973,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffde86;
+  background: #700bff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3006,4 +3006,13 @@ hr {
 }
 body {
   background: url("https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/Background/Princess.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.main-inner {
+  margin-top: 60px;
+  padding: 60px 60px 60px 60px;
+  background: #fff;
+  opacity: 0.8;
+  min-height: 500px;
 }
