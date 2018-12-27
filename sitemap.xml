@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.zjohnson.top/RNA-seq/Fastp.html</loc>
+    
+    <lastmod>2018-12-27T07:13:49.252Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.zjohnson.top/RNA-seq/GO-&-KEGG.html</loc>
     
     <lastmod>2018-12-20T14:24:42.669Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://www.zjohnson.top/RNA-seq/HISAT2.html</loc>
     
     <lastmod>2018-12-19T12:50:26.962Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.zjohnson.top/RNA-seq/Fastp.html</loc>
-    
-    <lastmod>2018-12-13T04:32:00.178Z</lastmod>
     
   </url>
   
