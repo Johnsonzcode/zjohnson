@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.zjohnson.top/about/index.html</loc>
+    
+    <lastmod>2019-01-05T14:51:24.496Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.zjohnson.top/RNA-seq/Fastp.html</loc>
     
     <lastmod>2018-12-27T07:13:49.252Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://www.zjohnson.top/RNA-seq/GO-&-KEGG.html</loc>
     
     <lastmod>2018-12-20T14:24:42.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.zjohnson.top/about/index.html</loc>
-    
-    <lastmod>2018-12-20T13:16:13.596Z</lastmod>
     
   </url>
   
