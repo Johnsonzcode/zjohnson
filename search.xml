@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[During 12.22-12.24]]></title>
+    <url>%2FPoetry%2FDuring-12.22-12.24.html</url>
+    <content type="text"><![CDATA[瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还]]></content>
+      <categories>
+        <category>Poetry</category>
+      </categories>
+      <tags>
+        <tag>Sentiment</tag>
+        <tag>Record</tag>
+        <tag>Memory</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Enrichment analysis of GO & KEGG]]></title>
     <url>%2FRNA-seq%2FGO-%26-KEGG.html</url>
     <content type="text"><![CDATA[前言GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。 介绍GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。这些语义主要分为三种：细胞组份（Cellular Component，简称 GO-CC），用于描述基因产物在细胞中的位置，如内质网，核或蛋白酶体等；分子功能(Molecular Function，简称 GO-MF)，大部分指的是单个基因产物的功能，如结合活性或催化活性等。 生物学途径/过程 (biological process，简称 GO-BP)，多是指具有多个步骤的有序的生物过程，如细胞生长、分化和维持、凋亡以及信号传导等过程。 Pathway指代谢通路，对差异基因进行pathway分析，可以知道实验条件下哪些代谢通路发生显著改变。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。 在线分析分析方式有很多，例如：神包 clusterProfiler，DAVID，KOBAS，webgestalt这里分别使用 KOBAS 和 webgestalt KOBASKOBAS 输入id：选择 id 类型、输入物种、输入id： 选择分析类型： 结果： 查看： 我点击通路名称时，得到404，可能是偶然因素 Webgestalt选择物种、分析方式、数据库、输入 ID 类型、参考序列 分析方式 ORA 或者 GSEA当选择数据库为 pathway，再选 KEGG 时，可做 KEGG 通路富集分析参考序列可自定义上传 参考 GO KEGG数据库用法 | 基因集功能注释 | 代谢通路富集 零基础的小白如何自己做GO/KEGG分析？ GO、KEGG富集分析——DAVID与KOBAS在线分析工具 推荐神包：clusterProfiler包做GO分析]]></content>
