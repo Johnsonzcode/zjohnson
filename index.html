@@ -407,6 +407,269 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.zjohnson.top/Linux/Server.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZJohnson">
+      <meta itemprop="description" content="爱Python的生信人">
+      <meta itemprop="image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/Blog/tx.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZJohnsonの海马体">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Linux/Server.html" class="post-title-link" itemprop="https://www.zjohnson.top/index.html">Common instructions about servers</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-08 09:48:37" itemprop="dateCreated datePublished" datetime="2019-03-08T09:48:37+08:00">2019-03-08</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Linux/Server.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Linux/Server.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。</p>
+<ul>
+<li>查看当前工作目录(完整路径)<blockquote>
+<p>pwd -P</p>
+</blockquote>
+</li>
+<li>列出当前目录所有文件和目录<blockquote>
+<p>ls</p>
+</blockquote>
+</li>
+<li>返回上级目录<blockquote>
+<p>cd ..</p>
+</blockquote>
+</li>
+<li>返回用户根目录<blockquote>
+<p>cd</p>
+</blockquote>
+</li>
+<li>创建新目录<blockquote>
+<p>mkdir **</p>
+</blockquote>
+</li>
+<li>删除文件/目录<blockquote>
+<p>rm **</p>
+</blockquote>
+</li>
+<li>查看命令使用文档<blockquote>
+<p>man 命令</p>
+</blockquote>
+</li>
+<li>绝对路径<blockquote>
+<p>/root/xx/</p>
+</blockquote>
+</li>
+<li>相对路径<blockquote>
+<p>./xxx</p>
+</blockquote>
+</li>
+<li>创建多层目录<blockquote>
+<p>mkdir -p xx/xx/xx</p>
+</blockquote>
+</li>
+<li>删除空目录<blockquote>
+<p>rmdir xx</p>
+</blockquote>
+</li>
+<li>移动文件到目录下<blockquote>
+<p>mv file dir</p>
+</blockquote>
+</li>
+<li>更改目录名<blockquote>
+<p>mv dir1 dir2</p>
+</blockquote>
+</li>
+<li>查看文件内容<blockquote>
+<p>cat xx # 从第一行顺序显示文件内容<br>tac xx # 从最后一行倒序显示文件内容</p>
+</blockquote>
+</li>
+<li>创建f1到f3的软连接<blockquote>
+<p>ln -s f1 f3</p>
+</blockquote>
+</li>
+<li>关于环境变量</li>
+</ul>
+<ol>
+<li><blockquote>
+<p>export PATH=/xx/xx:$PATH # 临时添加，终端关闭后失效</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>vim ~/.bashrc<br>末尾追加export PATH=”/xx/xx:$PATH” # 当前用户生效</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>vim /etc/profile<br>末尾追加export PATH=”/xx/xx:$PATH”<br>source /etc/profile # 所有用户</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>export PATH=$PATH:路径1:路径2:路径n<br>$PATH表示之前所有设置的路径,不加入则失去之前设置的路径</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>查找文件<blockquote>
+<p>find /xx -name ** # 可以结合正则表达式</p>
+</blockquote>
+</li>
+<li>关于vi</li>
+</ul>
+<ol>
+<li>vi是linux自带编辑器，直接在终端使用，方法 vi xx</li>
+<li>进入vi后，是在命令模式，输入i到输入模式，输入:到底行命令模式，在输入模式下按Esc才能切换模式</li>
+<li>底行命令模式中，q表示退出，w表示保存，！表示强制</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+       
+    
+    
+    
+
+    <footer class="post-footer">
+      
+      
+
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.zjohnson.top/Poetry/During-12.22-12.24.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -517,12 +780,12 @@
         
           
             <center><br>路途所感<br><br>瞥高山流水 噫仙雾缭绕<br>于魔音灌耳 感思绪飞扬<br>间始觉故里 房屋几座农家人<br>余忆吾幼年 终日嬉戏无劳神<br>他乡苦寒窗数载 师承先德苦栽培<br>不知学子才尚浅 搁至此久得空闲<br>绒雪纷飞不觉寒 道过中途迫遣返<br>早知落雪差池生 何须改日把家还<br><br><br>
-        <div id="aplayer-OHBEVazD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:50%;">
+        <div id="aplayer-XTxUKRAE" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:50%;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-OHBEVazD"),
+            element: document.getElementById("aplayer-XTxUKRAE"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1685,7 +1948,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1704,7 +1967,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1745,7 +2010,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
