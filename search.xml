@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Common instructions about servers]]></title>
     <url>%2FLinux%2FServer.html</url>
-    <content type="text"><![CDATA[起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。 查看当前工作目录(完整路径) pwd -P 列出当前目录所有文件和目录 ls 返回上级目录 cd .. 返回用户根目录 cd 创建新目录 mkdir ** 删除文件/目录 rm ** 查看命令使用文档 man 命令 绝对路径 /root/xx/ 相对路径 ./xxx 创建多层目录 mkdir -p xx/xx/xx 删除空目录 rmdir xx 移动文件到目录下 mv file dir 更改目录名 mv dir1 dir2 查看文件内容 cat xx # 从第一行顺序显示文件内容tac xx # 从最后一行倒序显示文件内容 创建f1到f3的软连接 ln -s f1 f3 关于环境变量 export PATH=/xx/xx:$PATH # 临时添加，终端关闭后失效 vim ~/.bashrc末尾追加export PATH=”/xx/xx:$PATH” # 当前用户生效 vim /etc/profile末尾追加export PATH=”/xx/xx:$PATH”source /etc/profile # 所有用户 export PATH=$PATH:路径1:路径2:路径n$PATH表示之前所有设置的路径,不加入则失去之前设置的路径 查找文件 find /xx -name ** # 可以结合正则表达式 关于vi vi是linux自带编辑器，直接在终端使用，方法 vi xx 进入vi后，是在命令模式，输入i到输入模式，输入:到底行命令模式，在输入模式下按Esc才能切换模式 底行命令模式中，q表示退出，w表示保存，！表示强制]]></content>
+    <content type="text"><![CDATA[起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。 查看当前工作目录(完整路径) pwd -P 列出当前目录所有文件和目录 ls 返回上级目录 cd .. 返回用户根目录 cd 创建新目录 mkdir ** 删除文件/目录 rm ** 查看命令使用文档 man 命令 绝对路径 /root/xx/ 相对路径 ./xxx 创建多层目录 mkdir -p xx/xx/xx 删除空目录 rmdir xx 移动文件到目录下 mv file dir 更改目录名 mv dir1 dir2 查看文件内容 cat xx # 从第一行顺序显示文件内容tac xx # 从最后一行倒序显示文件内容 创建f1到f3的软连接 ln -s f1 f3 关于环境变量 export PATH=/xx/xx:$PATH # 临时添加，终端关闭后失效 vi ~/.bashrc末尾追加export PATH=”/xx/xx:$PATH” # 当前用户生效 vi /etc/profile末尾追加export PATH=”/xx/xx:$PATH”source /etc/profile # 所有用户 export PATH=$PATH:路径1:路径2:路径n $PATH表示之前所有设置的路径,不加入则失去之前设置的路径 查找文件 find /xx -name ** # 可以结合正则表达式 关于vi vi是linux自带编辑器，直接在终端使用，方法 vi xx 进入vi后，是在命令模式，输入i到输入模式，输入:到底行命令模式，在输入模式下按Esc才能切换模式 底行命令模式中，q表示退出，w表示保存，！表示强制]]></content>
       <categories>
         <category>Linux</category>
       </categories>
@@ -15,7 +15,7 @@
   <entry>
     <title><![CDATA[During 12.22-12.24]]></title>
     <url>%2FPoetry%2FDuring-12.22-12.24.html</url>
-    <content type="text"><![CDATA[路途所感瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-kFrCeBKH"), narrow: false, autoplay: false, showlrc: false, music: { title: "天分", author: "薛之谦", url: "http://www.ytmp3.cn/down/56232.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[路途所感瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-bRBvZqBW"), narrow: false, autoplay: false, showlrc: false, music: { title: "天分", author: "薛之谦", url: "http://www.ytmp3.cn/down/56232.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>

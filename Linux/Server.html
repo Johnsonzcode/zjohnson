@@ -111,18 +111,18 @@
 
 
 
-  <meta name="description" content="起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。  查看当前工作目录(完整路径) pwd -P   列出当前目录所有文件和目录 ls   返回上级目录 cd ..   返回用户根目录 cd   创建新目录 mkdir **   删除文件/目录 rm **   查看命令使用文档 man 命令   绝对路径 /root/xx/   相对路径">
+  <meta name="description" content="起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。">
 <meta name="keywords" content="Server,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Common instructions about servers">
 <meta property="og:url" content="https://www.zjohnson.top/Linux/Server.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
-<meta property="og:description" content="起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。  查看当前工作目录(完整路径) pwd -P   列出当前目录所有文件和目录 ls   返回上级目录 cd ..   返回用户根目录 cd   创建新目录 mkdir **   删除文件/目录 rm **   查看命令使用文档 man 命令   绝对路径 /root/xx/   相对路径">
+<meta property="og:description" content="起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-08T03:11:04.842Z">
+<meta property="og:updated_time" content="2019-03-08T03:20:26.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Common instructions about servers">
-<meta name="twitter:description" content="起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。  查看当前工作目录(完整路径) pwd -P   列出当前目录所有文件和目录 ls   返回上级目录 cd ..   返回用户根目录 cd   创建新目录 mkdir **   删除文件/目录 rm **   查看命令使用文档 man 命令   绝对路径 /root/xx/   相对路径">
+<meta name="twitter:description" content="起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。">
 
 
 
@@ -516,7 +516,7 @@
       
 
       
-        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。</p>
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。<br><a id="more"></a></p>
 <ul>
 <li>查看当前工作目录(完整路径)<blockquote>
 <p>pwd -P</p>
@@ -586,16 +586,16 @@
 </blockquote>
 </li>
 <li><blockquote>
-<p>vim ~/.bashrc<br>末尾追加export PATH=”/xx/xx:$PATH” # 当前用户生效</p>
+<p>vi ~/.bashrc<br>末尾追加export PATH=”/xx/xx:$PATH” # 当前用户生效</p>
 </blockquote>
 </li>
 <li><blockquote>
-<p>vim /etc/profile<br>末尾追加export PATH=”/xx/xx:$PATH”<br>source /etc/profile # 所有用户</p>
+<p>vi /etc/profile<br>末尾追加export PATH=”/xx/xx:$PATH”<br>source /etc/profile # 所有用户</p>
 </blockquote>
 </li>
 <li><blockquote>
-<p>export PATH=$PATH:路径1:路径2:路径n<br>$PATH表示之前所有设置的路径,不加入则失去之前设置的路径</p>
-</blockquote>
+<p>export PATH=$PATH:路径1:路径2:路径n</p>
+<h1 id="PATH表示之前所有设置的路径-不加入则失去之前设置的路径"><a href="#PATH表示之前所有设置的路径-不加入则失去之前设置的路径" class="headerlink" title="$PATH表示之前所有设置的路径,不加入则失去之前设置的路径"></a>$PATH表示之前所有设置的路径,不加入则失去之前设置的路径</h1></blockquote>
 </li>
 </ol>
 <ul>
@@ -995,7 +995,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#PATH表示之前所有设置的路径-不加入则失去之前设置的路径"><span class="nav-number"></span> <span class="nav-text">$PATH表示之前所有设置的路径,不加入则失去之前设置的路径</span></a></li></div>
             
 
           </div>
