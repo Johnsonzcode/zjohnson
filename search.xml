@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[利用IGV判断测序是否为链特异性测序]]></title>
     <url>%2FRNA-seq%2F%E5%88%A9%E7%94%A8IGV%E5%88%A4%E6%96%AD%E6%B5%8B%E5%BA%8F%E6%98%AF%E5%90%A6%E4%B8%BA%E9%93%BE%E7%89%B9%E5%BC%82%E6%80%A7%E6%B5%8B%E5%BA%8F.html</url>
-    <content type="text"><![CDATA[起因在学习RNA-seq的过程中，用以前的（2015年左右）生物信息分析流程的tophat和htseq等软件，需要在参数中指出建库类型，否则对结果产生较大的影响。 检索通过百度，检索到可以用IGV基因组浏览器来鉴别 下载安装点击进入下载页面按个人情况选择平台进行安装 使用准备准备好自己所研究物种的参考基因组文件（xx.fa）、注释文件（xx.gtf/gff）和已经比对完成的bam文件。 载入文件先载入基因组：Genomes &gt; Load Genome from File &gt; 选定基因组文件注意：可能需要建立索引，按文字指示操作就行 载入注释文件：File &gt; Load from File &gt; 选定排序后的注释文件注意：可能需要建立索引，按文字指示操作就行。必须要通过IGVtools排序，一样按文字指示操作 载入bam文件：File &gt; Load from File &gt; 选定bam文件注意：bam文件需要用 samtools index xx.bam来操作在同级目录下生成xx.bam.bai后才能被IGV浏览到此文件载入完成。 选择合适位置查看Tips（仅供像我一样的新手参考）：只需要放大倍数增大到正在查看的染色体区域有2500bp左右的倍数即可（仅供参考），或者是注释文件中的基因恰好能有一到两个在窗口之中即可按顺序如下达到如下步骤：上图按照igv 颜色选项中的read strand 方向进行区分，可以看到所有红色read都是在正链方向（注意正链不是正义链），而所有蓝色的read都是负链方向。可以看到同一个gene相关的read颜色还是混杂的，因为它并不是链特异性文库，所以不能分开first strand和second strand。如果是链特异性建库、测序会出现： 参考1.链特异性测序及在IGV中的可视结果2.用IGV判断NGS链特异性3.链特异建库那点事]]></content>
+    <content type="text"><![CDATA[起因在学习RNA-seq的过程中，用以前的（2015年左右）生物信息分析流程的tophat和htseq等软件，需要在参数中指出建库类型，否则对结果产生较大的影响。 检索通过百度，检索到可以用IGV基因组浏览器来鉴别 下载安装点击进入下载页面按个人情况选择平台进行安装 使用准备准备好自己所研究物种的参考基因组文件（xx.fa）、注释文件（xx.gtf/gff）和已经比对完成的bam文件。 载入文件先载入基因组：Genomes &gt; Load Genome from File &gt; 选定基因组文件注意：可能需要建立索引，按文字指示操作就行 载入注释文件：File &gt; Load from File &gt; 选定排序后的注释文件注意：可能需要建立索引，按文字指示操作就行。必须要通过IGVtools排序，一样按文字指示操作 载入bam文件：File &gt; Load from File &gt; 选定bam文件注意：bam文件需要用 samtools index xx.bam来操作在同级目录下生成xx.bam.bai后才能被IGV浏览到此文件载入完成。 选择合适位置查看Tips（仅供像我一样的新手参考）：只需要放大倍数增大到正在查看的染色体区域有2500bp左右的倍数即可（仅供参考），或者是注释文件中的基因恰好能有一到两个在窗口之中即可按顺序达到如下步骤：上图按照igv 颜色选项中的read strand 方向进行区分，可以看到所有红色read都是在正链方向（注意正链不是正义链），而所有蓝色的read都是负链方向。可以看到同一个gene相关的read颜色还是混杂的，因为它并不是链特异性文库，所以不能分开first strand和second strand。如果是链特异性建库、测序会出现： 参考1.链特异性测序及在IGV中的可视结果2.用IGV判断NGS链特异性3.链特异建库那点事]]></content>
       <categories>
         <category>RNA-seq</category>
       </categories>
@@ -40,7 +40,7 @@
   <entry>
     <title><![CDATA[During 12.22-12.24]]></title>
     <url>%2FPoetry%2FDuring-12.22-12.24.html</url>
-    <content type="text"><![CDATA[路途所感瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-TsXRdJXc"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[路途所感瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-DXWhybJj"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>
