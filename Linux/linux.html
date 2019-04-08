@@ -112,25 +112,25 @@
 
 
 
-  <meta name="description" content="前言Fastp是一款旨在提供FastQ文件快速的一体化预处理工具。由C语言开发且支持多线程的高性能表现。">
-<meta name="keywords" content="Fastp,Quality control">
+  <meta name="description" content="起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。">
+<meta name="keywords" content="Server,Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quality control -- Fastp">
-<meta property="og:url" content="https://www.zjohnson.top/RNA-seq/Fastp.html">
+<meta property="og:title" content="Common instructions about servers">
+<meta property="og:url" content="https://www.zjohnson.top/Linux/linux.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
-<meta property="og:description" content="前言Fastp是一款旨在提供FastQ文件快速的一体化预处理工具。由C语言开发且支持多线程的高性能表现。">
+<meta property="og:description" content="起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-01T01:47:04.775Z">
+<meta property="og:updated_time" content="2019-03-08T04:06:18.909Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Quality control -- Fastp">
-<meta name="twitter:description" content="前言Fastp是一款旨在提供FastQ文件快速的一体化预处理工具。由C语言开发且支持多线程的高性能表现。">
+<meta name="twitter:title" content="Common instructions about servers">
+<meta name="twitter:description" content="起因学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.zjohnson.top/RNA-seq/Fastp.html">
+  <link rel="canonical" href="https://www.zjohnson.top/Linux/linux.html">
 
 
 
@@ -140,7 +140,7 @@
   };
 </script>
 
-  <title>Quality control -- Fastp | ZJohnsonの海马体</title>
+  <title>Common instructions about servers | ZJohnsonの海马体</title>
   
 
 
@@ -406,7 +406,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.zjohnson.top/RNA-seq/Fastp.html">
+    <link itemprop="mainEntityOfPage" href="https://www.zjohnson.top/Linux/linux.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZJohnson">
@@ -423,7 +423,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Quality control -- Fastp
+          <h2 class="post-title" itemprop="name headline">Common instructions about servers
               
             
           </h2>
@@ -448,7 +448,7 @@
                 
               
 
-              <time title="创建时间：2018-11-29 19:53:07" itemprop="dateCreated datePublished" datetime="2018-11-29T19:53:07+08:00">2018-11-29</time>
+              <time title="创建时间：2019-03-08 09:48:37" itemprop="dateCreated datePublished" datetime="2019-03-08T09:48:37+08:00">2019-03-08</time>
             
 
             
@@ -466,7 +466,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/RNA-seq/" itemprop="url" rel="index"><span itemprop="name">RNA-seq</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
 
                 
                 
@@ -481,8 +481,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/RNA-seq/Fastp.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/RNA-seq/Fastp.html" itemprop="commentCount"></span>
+                <a href="/Linux/linux.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Linux/linux.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -517,77 +517,99 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Fastp是一款旨在提供FastQ文件快速的一体化预处理工具。由C语言开发且支持<strong>多线程</strong>的高性能表现。<br><a id="more"></a><br>官方文档：<a href="https://github.com/OpenGene/fastp" rel="external nofollow noopener noreferrer" target="_blank">Fastp in GitHub</a><br>Fastp文章链接：<a href="https://www.biorxiv.org/content/early/2018/03/01/274100" rel="external nofollow noopener noreferrer" target="_blank">https://www.biorxiv.org/content/early/2018/03/01/274100</a></p>
-<hr>
-<h1 id="功能特点"><a href="#功能特点" class="headerlink" title="功能特点"></a>功能特点</h1><ul>
-<li>对数据自动进行全方位质控，生成<strong>人性化的报告</strong></li>
-<li>过滤功能（低质量，太短，太多N……）</li>
-<li>对每一个序列的头部或尾部，计算滑动窗内的质量均值，并将均值较低的子序列进行切除（类似Trimmomatic的做法，但是快非常多）</li>
-<li>全局剪裁 （在头/尾部，不影响去重），对于Illumina下机数据往往最后一到两个cycle需要这样处理</li>
-<li>去除接头污染。厉害的是，你不用输入接头序列，因为算法会<strong>自动识别</strong>接头序列并进行剪裁</li>
-<li>对于双端测序（PE）的数据，软件会<strong>自动查找</strong>每一对read的重叠区域，并对该重叠区域中不匹配的碱基对进行校正</li>
-<li>去除尾部的polyG。对于Illumina NextSeq/NovaSeq的测序数据，因为是两色法发光，polyG是常有的事，所以该特性对该两类测序平台默认打开</li>
-<li>对于PE数据中的overlap区间中不一致的碱基对，依据质量值进行校正</li>
-<li>可以对带分子标签（UMI）的数据进行预处理，不管UMI在插入片段还是在index上，都可以轻松处理</li>
-<li>可以将输出进行分拆，而且支持两种模式，分别是指定分拆的个数，或者分拆后每个文件的行数</li>
-<li><strong>更多查看官方文档</strong></li>
-</ul>
-<p><strong>注意</strong>：</p>
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>学校服务器linux版本过低，想安装生物信息学软件未果，但在折腾过程中学到很过新的指令，记录在此以免忘记。<br><a id="more"></a></p>
 <ul>
-<li>默认已经开启一些功能，也可关闭或者改变mo某个功能的默认参数</li>
-<li>支持gzip输入与输出</li>
-<li>支持SE（single end）和PE（paired end）数据</li>
-<li>完美支持short reads和一定程度的long reads</li>
-<li>生成html和json报告，且可<strong>动态交互</strong>（<a href="http://opengene.org/fastp/fastp.html" rel="external nofollow noopener noreferrer" target="_blank">html预览</a> <a href="http://opengene.org/fastp/fastp.json" rel="external nofollow noopener noreferrer" target="_blank">json预览</a>）</li>
-</ul>
-<h1 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h1><p>官方文档介绍了三种获得Fastp的方式：</p>
-<ol>
-<li><p>Install with Bioconda (may be not the lastest version)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c bioconda fastp</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Download binary (only for Linux system, <a href="http://opengene.org/fastp/fastp" rel="external nofollow noopener noreferrer" target="_blank">http://opengene.org/fastp/fastp</a>)<br>This binary was compiled on CentOS, and tested on CentOS/Ubuntu (测试于Ubuntu 18.04 &amp; 16.04可用)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http://opengene.org/fastp/fastp</span><br><span class="line">chmod a+x ./fastp</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Compile from source<br>Get source (you can also use browser to download from master or releases)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/OpenGene/fastp.git</span><br><span class="line"><span class="comment"># build</span></span><br><span class="line"><span class="built_in">cd</span> fastp</span><br><span class="line">make</span><br><span class="line"><span class="comment"># Install</span></span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>我选择二进制文件，可直接按如下代码使用，无需安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./fastp [option]</span><br></pre></td></tr></table></figure></p>
-<h1 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h1><p>SE数据：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastp -i in.fq -o out.fq</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>输入需要过滤、质控和预处理的fastq文件（in.fq）<br>输出clean data（out.fq）、报告文件（fast.html和fastp.json）<br>报告文件名称可通过 -h xx.html 和 -j xx.json 更改</p>
+<li>查看当前工作目录(完整路径)<blockquote>
+<p>pwd -P</p>
 </blockquote>
-<p>PE数据：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastp -i in.R1.fq -o out.R1.fq -I in.R2.fq -O out.R2.fq</span><br></pre></td></tr></table></figure></p>
-<p><strong>注意</strong>：</p>
-<ul>
-<li>o与O是小写字母o与大写字母O</li>
-<li>gzip数据的输入无需参数，自动按后缀识别（xx.gz）<br>例：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastp -i in.R1.fq.gz -I in.R2.fq.gz -o out.R1.fq.gz -O out.R2.fq.gz</span><br></pre></td></tr></table></figure>
 </li>
+<li>列出当前目录所有文件和目录<blockquote>
+<p>ls</p>
+</blockquote>
+</li>
+<li>返回上级目录<blockquote>
+<p>cd ..</p>
+</blockquote>
+</li>
+<li>返回用户根目录<blockquote>
+<p>cd</p>
+</blockquote>
+</li>
+<li>创建新目录<blockquote>
+<p>mkdir **</p>
+</blockquote>
+</li>
+<li>删除文件/目录<blockquote>
+<p>rm **</p>
+</blockquote>
+</li>
+<li>查看命令使用文档<blockquote>
+<p>man 命令</p>
+</blockquote>
+</li>
+<li>绝对路径<blockquote>
+<p>/root/xx/</p>
+</blockquote>
+</li>
+<li>相对路径<blockquote>
+<p>./xxx</p>
+</blockquote>
+</li>
+<li>创建多层目录<blockquote>
+<p>mkdir -p xx/xx/xx</p>
+</blockquote>
+</li>
+<li>删除空目录<blockquote>
+<p>rmdir xx</p>
+</blockquote>
+</li>
+<li>移动文件到目录下<blockquote>
+<p>mv file dir</p>
+</blockquote>
+</li>
+<li>更改目录名<blockquote>
+<p>mv dir1 dir2</p>
+</blockquote>
+</li>
+<li>查看文件内容<blockquote>
+<p>cat xx # 从第一行顺序显示文件内容<br>tac xx # 从最后一行倒序显示文件内容</p>
+</blockquote>
+</li>
+<li>创建f1到f3的软连接<blockquote>
+<p>ln -s f1 f3</p>
+</blockquote>
+</li>
+<li>关于环境变量</li>
 </ul>
-<h1 id="精确使用"><a href="#精确使用" class="headerlink" title="精确使用"></a>精确使用</h1><p>具体参数的使用、调节都需要根据具体的质控要求及项目或者文章结果要求进行更改。<br>附上全部参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">usage: fastp -i &lt;in1&gt; -o &lt;out1&gt; [-I &lt;in1&gt; -O &lt;out2&gt;] [options...]</span><br><span class="line">options:</span><br><span class="line">  # I/O options</span><br><span class="line">  -i, --in1                          read1 input file name (string)</span><br><span class="line">  -o, --out1                         read1 output file name (string [=])</span><br><span class="line">  -I, --in2                          read2 input file name (string [=])</span><br><span class="line">  -O, --out2                         read2 output file name (string [=])</span><br><span class="line">  -6, --phred64                      indicate the input is using phred64 scoring (it&apos;ll be converted to phred33, so the output will still be phred33)</span><br><span class="line">  -z, --compression                  compression level for gzip output (1 ~ 9). 1 is fastest, 9 is smallest, default is 4. (int [=4])</span><br><span class="line">      --stdin                          input from STDIN. If the STDIN is interleaved paired-end FASTQ, please also add --interleaved_in.</span><br><span class="line">      --stdout                         output passing-filters reads to STDOUT. This option will result in interleaved FASTQ output for paired-end input. Disabled by default.</span><br><span class="line">      --interleaved_in                 indicate that &lt;in1&gt; is an interleaved FASTQ which contains both read1 and read2. Disabled by default.</span><br><span class="line">      --reads_to_process             specify how many reads/pairs to be processed. Default 0 means process all reads. (int [=0])</span><br><span class="line">      --dont_overwrite               don&apos;t overwrite existing files. Overwritting is allowed by default.</span><br><span class="line">  </span><br><span class="line">  # adapter trimming options</span><br><span class="line">  -A, --disable_adapter_trimming     adapter trimming is enabled by default. If this option is specified, adapter trimming is disabled</span><br><span class="line">  -a, --adapter_sequence               the adapter for read1. For SE data, if not specified, the adapter will be auto-detected. For PE data, this is used if R1/R2 are found not overlapped. (string [=auto])</span><br><span class="line">      --adapter_sequence_r2            the adapter for read2 (PE data only). This is used if R1/R2 are found not overlapped. If not specified, it will be the same as &lt;adapter_sequence&gt; (string [=])</span><br><span class="line">      --detect_adapter_for_pe          by default, the adapter sequence auto-detection is enabled for SE data only, turn on this option to enable it for PE data.</span><br><span class="line">    </span><br><span class="line">  # global trimming options</span><br><span class="line">  -f, --trim_front1                    trimming how many bases in front for read1, default is 0 (int [=0])</span><br><span class="line">  -t, --trim_tail1                     trimming how many bases in tail for read1, default is 0 (int [=0])</span><br><span class="line">  -b, --max_len1                       if read1 is longer than max_len1, then trim read1 at its tail to make it as long as max_len1. Default 0 means no limitation (int [=0])</span><br><span class="line">  -F, --trim_front2                    trimming how many bases in front for read2. If it&apos;s not specified, it will follow read1&apos;s settings (int [=0])</span><br><span class="line">  -T, --trim_tail2                     trimming how many bases in tail for read2. If it&apos;s not specified, it will follow read1&apos;s settings (int [=0])</span><br><span class="line">  -B, --max_len2                       if read2 is longer than max_len2, then trim read2 at its tail to make it as long as max_len2. Default 0 means no limitation. If it&apos;s not specified, it will follow read1&apos;s settings (int [=0])</span><br><span class="line"></span><br><span class="line">  # polyG tail trimming, useful for NextSeq/NovaSeq data</span><br><span class="line">  -g, --trim_poly_g                  force polyG tail trimming, by default trimming is automatically enabled for Illumina NextSeq/NovaSeq data</span><br><span class="line">      --poly_g_min_len                 the minimum length to detect polyG in the read tail. 10 by default. (int [=10])</span><br><span class="line">  -G, --disable_trim_poly_g          disable polyG tail trimming, by default trimming is automatically enabled for Illumina NextSeq/NovaSeq data</span><br><span class="line"></span><br><span class="line">  # polyX tail trimming</span><br><span class="line">  -x, --trim_poly_x                    enable polyX trimming in 3&apos; ends.</span><br><span class="line">      --poly_x_min_len                 the minimum length to detect polyX in the read tail. 10 by default. (int [=10])</span><br><span class="line">  </span><br><span class="line">  # per read cutting by quality options</span><br><span class="line">  -5, --cut_by_quality5              enable per read cutting by quality in front (5&apos;), default is disabled (WARNING: this will interfere deduplication for both PE/SE data)</span><br><span class="line">  -3, --cut_by_quality3              enable per read cutting by quality in tail (3&apos;), default is disabled (WARNING: this will interfere deduplication for SE data)</span><br><span class="line">  -W, --cut_window_size              the size of the sliding window for sliding window trimming, default is 4 (int [=4])</span><br><span class="line">  -M, --cut_mean_quality             the bases in the sliding window with mean quality below cutting_quality will be cut, default is Q20 (int [=20])</span><br><span class="line">  </span><br><span class="line">  # quality filtering options</span><br><span class="line">  -Q, --disable_quality_filtering    quality filtering is enabled by default. If this option is specified, quality filtering is disabled</span><br><span class="line">  -q, --qualified_quality_phred      the quality value that a base is qualified. Default 15 means phred quality &gt;=Q15 is qualified. (int [=15])</span><br><span class="line">  -u, --unqualified_percent_limit    how many percents of bases are allowed to be unqualified (0~100). Default 40 means 40% (int [=40])</span><br><span class="line">  -n, --n_base_limit                 if one read&apos;s number of N base is &gt;n_base_limit, then this read/pair is discarded. Default is 5 (int [=5])</span><br><span class="line">  </span><br><span class="line">  # length filtering options</span><br><span class="line">  -L, --disable_length_filtering     length filtering is enabled by default. If this option is specified, length filtering is disabled</span><br><span class="line">  -l, --length_required              reads shorter than length_required will be discarded, default is 15. (int [=15])</span><br><span class="line">      --length_limit                 reads longer than length_limit will be discarded, default 0 means no limitation. (int [=0])</span><br><span class="line"></span><br><span class="line">  # low complexity filtering</span><br><span class="line">  -y, --low_complexity_filter          enable low complexity filter. The complexity is defined as the percentage of base that is different from its next base (base[i] != base[i+1]).</span><br><span class="line">  -Y, --complexity_threshold           the threshold for low complexity filter (0~100). Default is 30, which means 30% complexity is required. (int [=30])</span><br><span class="line"></span><br><span class="line">  # filter reads with unwanted indexes (to remove possible contamination)</span><br><span class="line">      --filter_by_index1               specify a file contains a list of barcodes of index1 to be filtered out, one barcode per line (string [=])</span><br><span class="line">      --filter_by_index2               specify a file contains a list of barcodes of index2 to be filtered out, one barcode per line (string [=])</span><br><span class="line">      --filter_by_index_threshold      the allowed difference of index barcode for index filtering, default 0 means completely identical. (int [=0])</span><br><span class="line"></span><br><span class="line">  # base correction by overlap analysis options</span><br><span class="line">  -c, --correction                   enable base correction in overlapped regions (only for PE data), default is disabled</span><br><span class="line">      --overlap_len_require          the minimum length of the overlapped region for overlap analysis based adapter trimming and correction. 30 by default. (int [=30])</span><br><span class="line">      --overlap_diff_limit           the maximum difference of the overlapped region for overlap analysis based adapter trimming and correction. 5 by default. (int [=5])</span><br><span class="line">  </span><br><span class="line">  # UMI processing</span><br><span class="line">  -U, --umi                          enable unique molecular identifier (UMI) preprocessing</span><br><span class="line">      --umi_loc                      specify the location of UMI, can be (index1/index2/read1/read2/per_index/per_read, default is none (string [=])</span><br><span class="line">      --umi_len                      if the UMI is in read1/read2, its length should be provided (int [=0])</span><br><span class="line">      --umi_prefix                   if specified, an underline will be used to connect prefix and UMI (i.e. prefix=UMI, UMI=AATTCG, final=UMI_AATTCG). No prefix by default (string [=])</span><br><span class="line">      --umi_skip                       if the UMI is in read1/read2, fastp can skip several bases following UMI, default is 0 (int [=0])</span><br><span class="line"></span><br><span class="line">  # overrepresented sequence analysis</span><br><span class="line">  -p, --overrepresentation_analysis    enable overrepresented sequence analysis.</span><br><span class="line">  -P, --overrepresentation_sampling    One in (--overrepresentation_sampling) reads will be computed for overrepresentation analysis (1~10000), smaller is slower, default is 20. (int [=20])</span><br><span class="line"></span><br><span class="line">  # reporting options</span><br><span class="line">  -j, --json                         the json format report file name (string [=fastp.json])</span><br><span class="line">  -h, --html                         the html format report file name (string [=fastp.html])</span><br><span class="line">  -R, --report_title                 should be quoted with &apos; or &quot;, default is &quot;fastp report&quot; (string [=fastp report])</span><br><span class="line">  </span><br><span class="line">  # threading options</span><br><span class="line">  -w, --thread                       worker thread number, default is 2 (int [=2])</span><br><span class="line">  </span><br><span class="line">  # output splitting options</span><br><span class="line">  -s, --split                        split output by limiting total split file number with this option (2~999), a sequential number prefix will be added to output name ( 0001.out.fq, 0002.out.fq...), disabled by default (int [=0])</span><br><span class="line">  -S, --split_by_lines               split output by limiting lines of each file with this option(&gt;=1000), a sequential number prefix will be added to output name ( 0001.out.fq, 0002.out.fq...), disabled by default (long [=0])</span><br><span class="line">  -d, --split_prefix_digits          the digits for the sequential number padding (1~10), default is 4, so the filename will be padded as 0001.xxx, 0 to disable padding (int [=4])</span><br><span class="line">  </span><br><span class="line">  # help</span><br><span class="line">  -?, --help                         print this message</span><br></pre></td></tr></table></figure></p>
-<p>我的项目的质控要求：</p>
 <ol>
-<li>去除接头（对于双端已自动去除，无需参数）</li>
-<li>去除含N比例大于0.1的 reads（参数 -n 的默认值为5，我的测序reads 长125bp，则 -n 应为12.5≈13）</li>
-<li>去除低质量 reads（Q phred &lt;= 20 的碱基数占整个 read 长度的 50％以上的 reads）（-q 20 -u 50）</li>
-<li>速度尽可能快：线程数：-w 4（CPU：双核四线程）</li>
+<li><blockquote>
+<p>export PATH=/xx/xx:$PATH # 临时添加，终端关闭后失效</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>vi ~/.bashrc<br>末尾追加export PATH=”/xx/xx:$PATH” # 当前用户生效</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>vi /etc/profile<br>末尾追加export PATH=”/xx/xx:$PATH”<br>source /etc/profile # 所有用户</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>export PATH=$PATH:路径1:路径2:路径n<br>$PATH表示之前所有设置的路径,不加入则失去之前设置的路径</p>
+</blockquote>
+</li>
 </ol>
-<p><strong>注意</strong>：</p>
 <ul>
-<li>线程数根据CPU能力调节</li>
-<li>质控要求所对应的参数调节具体查看官方文档</li>
+<li>查找文件<blockquote>
+<p>find /xx -name ** # 可以结合正则表达式</p>
+</blockquote>
+</li>
+<li>关于vi</li>
 </ul>
-<p>批量化处理数据时，可写出相应 bash 脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> 10 11; <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">    ./fastp -i raw/E<span class="variable">$&#123;i&#125;</span>_1.fq.gz -I raw/E<span class="variable">$&#123;i&#125;</span>_2.fq.gz\</span><br><span class="line">    -o out/out.E<span class="variable">$&#123;i&#125;</span>_1.fq.gz -O out/out.E<span class="variable">$&#123;i&#125;</span>_2.fq.gz\</span><br><span class="line">    -q 20 -u 50 -n 13 -w 4 -h out/E<span class="variable">$&#123;i&#125;</span>.html -j out/E<span class="variable">$&#123;i&#125;</span>.json</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">wait</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>注意</strong>：</p>
-<ul>
-<li>这里的 raw 和 out 是我创建的文件夹，便于管理</li>
-<li>bash 语法自行学习使用</li>
-</ul>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="https://github.com/OpenGene/fastp" rel="external nofollow noopener noreferrer" target="_blank">官方文档</a></li>
-<li><a href="http://blog.sciencenet.cn/blog-3406804-1161192.html" rel="external nofollow noopener noreferrer" target="_blank">生信工具Fastp的安装及其在二代测序数据过滤质控中的使用说明</a></li>
-<li><a href="https://www.jianshu.com/p/6f492058da5b" rel="external nofollow noopener noreferrer" target="_blank">使用fastp进行数据质控</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/33601691" rel="external nofollow noopener noreferrer" target="_blank">fastp: 一款超快速全功能的FASTQ文件自动化质控+过滤+校正+预处理软件</a></li>
+<ol>
+<li>vi是linux自带编辑器，直接在终端使用，方法 vi xx</li>
+<li>进入vi后，是在命令模式，输入i到输入模式，输入:到底行命令模式，在输入模式下按Esc才能切换模式</li>
+<li>底行命令模式中，q表示退出，w表示保存，！表示强制</li>
 </ol>
 
       
@@ -609,9 +631,9 @@
       <div class="post-tags">
         <center>
         
-          <a href="/tags/Fastp/" rel="tag"><i class="fa fa-tag"></i> Fastp</a>
+          <a href="/tags/Server/" rel="tag"><i class="fa fa-tag"></i> Server</a>
         
-          <a href="/tags/Quality-control/" rel="tag"><i class="fa fa-tag"></i> Quality control</a>
+          <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
         
         </center>
       </div>
@@ -637,7 +659,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://www.zjohnson.top/RNA-seq/Fastp.html" title="Quality control -- Fastp">https://www.zjohnson.top/RNA-seq/Fastp.html</a>
+    <a href="https://www.zjohnson.top/Linux/linux.html" title="Common instructions about servers">https://www.zjohnson.top/Linux/linux.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -751,8 +773,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Hexo/hello-world.html" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/RNA-seq/samtools.html" rel="next" title="Samtools 0.19 和 HTSeq0.6.1p1 报错">
+                <i class="fa fa-chevron-left"></i> Samtools 0.19 和 HTSeq0.6.1p1 报错
               </a>
             
           </div>
@@ -761,8 +783,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/RNA-seq/HISAT2.html" rel="prev" title="Mapping -- HISAT2">
-                Mapping -- HISAT2 <i class="fa fa-chevron-right"></i>
+              <a href="/RNA-seq/利用IGV判断测序是否为链特异性测序.html" rel="prev" title="利用IGV判断测序是否为链特异性测序">
+                利用IGV判断测序是否为链特异性测序 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -992,7 +1014,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#功能特点"><span class="nav-number">2.</span> <span class="nav-text">功能特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载安装"><span class="nav-number">3.</span> <span class="nav-text">下载安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单使用"><span class="nav-number">4.</span> <span class="nav-text">简单使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#精确使用"><span class="nav-number">5.</span> <span class="nav-text">精确使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li></ol></div>
             
 
           </div>
