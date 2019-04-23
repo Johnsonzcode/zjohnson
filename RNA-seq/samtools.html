@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="起因因学习需要，使用 samtools 0.19，遇上几个不常见的报错信息。特做记录。">
+  <meta name="description" content="起因因学习需要，使用 samtools 0.19和HTSeq0.6.1p1，遇上几个不常见的报错信息。特做记录。">
 <meta name="keywords" content="report imformation,Samtools,HTSeq">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Samtools 0.19 和 HTSeq0.6.1p1 报错">
+<meta property="og:title" content="Samtools0.19和HTSeq0.6.1p1报错的解决方案">
 <meta property="og:url" content="https://www.zjohnson.top/RNA-seq/samtools.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
-<meta property="og:description" content="起因因学习需要，使用 samtools 0.19，遇上几个不常见的报错信息。特做记录。">
+<meta property="og:description" content="起因因学习需要，使用 samtools 0.19和HTSeq0.6.1p1，遇上几个不常见的报错信息。特做记录。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-08T12:02:12.344Z">
+<meta property="og:updated_time" content="2019-04-22T14:45:00.583Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Samtools 0.19 和 HTSeq0.6.1p1 报错">
-<meta name="twitter:description" content="起因因学习需要，使用 samtools 0.19，遇上几个不常见的报错信息。特做记录。">
+<meta name="twitter:title" content="Samtools0.19和HTSeq0.6.1p1报错的解决方案">
+<meta name="twitter:description" content="起因因学习需要，使用 samtools 0.19和HTSeq0.6.1p1，遇上几个不常见的报错信息。特做记录。">
 
 
 
@@ -140,7 +140,7 @@
   };
 </script>
 
-  <title>Samtools 0.19 和 HTSeq0.6.1p1 报错 | ZJohnsonの海马体</title>
+  <title>Samtools0.19和HTSeq0.6.1p1报错的解决方案 | ZJohnsonの海马体</title>
   
 
 
@@ -423,7 +423,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Samtools 0.19 和 HTSeq0.6.1p1 报错
+          <h2 class="post-title" itemprop="name headline">Samtools0.19和HTSeq0.6.1p1报错的解决方案
               
             
           </h2>
@@ -517,14 +517,13 @@
       
 
       
-        <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>因学习需要，使用 samtools 0.19，遇上几个不常见的报错信息。特做记录。<br><a id="more"></a></p>
+        <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>因学习需要，使用 samtools 0.19和HTSeq0.6.1p1，遇上几个不常见的报错信息。特做记录。<br><a id="more"></a></p>
 <h1 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h1><ol>
 <li><strong>samtools sort乱码</strong><br>表现：终端在最后完成排序后不断输出乱码<br>原因：0.19版本的samtools没有添加 -o 选项，现在的教程都添加了这个参数。<br>解决方案：去掉 -o 参数，直接接排序完成的文件名前缀（除.bam之外的部分）</li>
 <li><strong>HTSeq 0.6.1p1计数报错1</strong><br>报错信息：Warning: Read HWI-D00523:166:C7106ANXX:1:2104:4424:74281 claims to have an aligned mate which could not be found in an adjacent line.<br>原因：tophat2的结果默认按染色体位置排序，而没有按read name排序，HTSeq检测到了孤立的read（在双端数据中）<br>解决方案：htseq之前用samtools按reads排序</li>
-<li><strong><em>HTSeq 0.6.1p1计数报错2</em></strong></li>
-<li>Error occured when processing SAM input (record #210 in file accepted_hits.bam):<br>‘pair_alignments’ needs a sequence of paired-end alignments<br>原因：htseq-count generally deals well with the orphaned reads (it just issues a warning, since how these should be handled is a bit ambiguous in the specification), but I wonder if mixing paired and single-end data in one file leads to this sort of error (in fact, looking through the source code suggests that that’s the only circumstance that can lead to this).【2】<br>解决方案：对tophat2的结果进行过滤【3】</li>
+<li><strong>HTSeq 0.6.1p1计数报错2</strong><br>Error occured when processing SAM input (record #210 in file accepted_hits.bam):<br>‘pair_alignments’ needs a sequence of paired-end alignments<br>原因：htseq-count generally deals well with the orphaned reads (it just issues a warning, since how these should be handled is a bit ambiguous in the specification), but I wonder if mixing paired and single-end data in one file leads to this sort of error (in fact, looking through the source code suggests that that’s the only circumstance that can lead to this).【3】<br>解决方案：对bam文件进行过滤【4】<br>双端：samtools view -bf 1 foo.bam &gt; foo.paired-end.bam<br>单端：samtools view -bF 1 foo.bam &gt; foo.single-end.bam</li>
 </ol>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>1.<a href="http://www.360doc.com/content/17/0808/12/19913717_677552864.shtml" rel="external nofollow noopener noreferrer" target="_blank">生信小白的RNA-seq实战历程</a><br>2.<a href="http://tiramisutes.github.io/2016/03/20/Samtools.html" rel="external nofollow noopener noreferrer" target="_blank">被忽视的Samtools参数</a><br>3.<a href="http://seqanswers.com/forums/showthread.php?t=41785" rel="external nofollow noopener noreferrer" target="_blank"><strong>2</strong></a><br>4.<a href="https://www.biostars.org/p/111221/" rel="external nofollow noopener noreferrer" target="_blank"><strong>3</strong></a></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>1.<a href="http://www.360doc.com/content/17/0808/12/19913717_677552864.shtml" rel="external nofollow noopener noreferrer" target="_blank">生信小白的RNA-seq实战历程</a><br>2.<a href="http://tiramisutes.github.io/2016/03/20/Samtools.html" rel="external nofollow noopener noreferrer" target="_blank">被忽视的Samtools参数</a><br>3.<a href="http://seqanswers.com/forums/showthread.php?t=41785" rel="external nofollow noopener noreferrer" target="_blank"><strong>3</strong></a><br>4.<a href="https://www.biostars.org/p/111221/" rel="external nofollow noopener noreferrer" target="_blank"><strong>4</strong></a></p>
 
       
     </div>
@@ -575,7 +574,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://www.zjohnson.top/RNA-seq/samtools.html" title="Samtools 0.19 和 HTSeq0.6.1p1 报错">https://www.zjohnson.top/RNA-seq/samtools.html</a>
+    <a href="https://www.zjohnson.top/RNA-seq/samtools.html" title="Samtools0.19和HTSeq0.6.1p1报错的解决方案">https://www.zjohnson.top/RNA-seq/samtools.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
