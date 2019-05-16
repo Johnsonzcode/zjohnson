@@ -112,27 +112,25 @@
 
 
 
-  <meta name="description" content="前言HTSeq 是一款针对于有参考基因组的，分析高通量测序数据的Python库。官网： HTSeq">
-<meta name="keywords" content="count reads">
+  <meta name="description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
+<meta name="keywords" content="Mapping">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gene expression levels analysis -- HTSeq-count">
-<meta property="og:url" content="https://www.zjohnson.top/RNA-seq/HTSeq-count.html">
+<meta property="og:title" content="Mapping -- HISAT2">
+<meta property="og:url" content="https://www.zjohnson.top/RNA-seq/HISAT2概述.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
-<meta property="og:description" content="前言HTSeq 是一款针对于有参考基因组的，分析高通量测序数据的Python库。官网： HTSeq">
+<meta property="og:description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/HTSeq/2013053-b58df35852061ed0.webp">
-<meta property="og:updated_time" content="2019-05-16T11:09:35.673Z">
+<meta property="og:updated_time" content="2019-05-16T14:09:50.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gene expression levels analysis -- HTSeq-count">
-<meta name="twitter:description" content="前言HTSeq 是一款针对于有参考基因组的，分析高通量测序数据的Python库。官网： HTSeq">
-<meta name="twitter:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/HTSeq/2013053-b58df35852061ed0.webp">
+<meta name="twitter:title" content="Mapping -- HISAT2">
+<meta name="twitter:description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.zjohnson.top/RNA-seq/HTSeq-count.html">
+  <link rel="canonical" href="https://www.zjohnson.top/RNA-seq/HISAT2概述.html">
 
 
 
@@ -142,7 +140,7 @@
   };
 </script>
 
-  <title>Gene expression levels analysis -- HTSeq-count | ZJohnsonの海马体</title>
+  <title>Mapping -- HISAT2 | ZJohnsonの海马体</title>
   
 
 
@@ -408,7 +406,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.zjohnson.top/RNA-seq/HTSeq-count.html">
+    <link itemprop="mainEntityOfPage" href="https://www.zjohnson.top/RNA-seq/HISAT2概述.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZJohnson">
@@ -425,7 +423,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Gene expression levels analysis -- HTSeq-count
+          <h2 class="post-title" itemprop="name headline">Mapping -- HISAT2
               
             
           </h2>
@@ -450,7 +448,7 @@
                 
               
 
-              <time title="创建时间：2018-12-14 19:49:51" itemprop="dateCreated datePublished" datetime="2018-12-14T19:49:51+08:00">2018-12-14</time>
+              <time title="创建时间：2018-12-11 20:44:16" itemprop="dateCreated datePublished" datetime="2018-12-11T20:44:16+08:00">2018-12-11</time>
             
 
             
@@ -483,8 +481,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/RNA-seq/HTSeq-count.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/RNA-seq/HTSeq-count.html" itemprop="commentCount"></span>
+                <a href="/RNA-seq/HISAT2概述.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/RNA-seq/HISAT2概述.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -519,46 +517,60 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>HTSeq 是一款针对于有参考基因组的，分析高通量测序数据的Python库。<br>官网： <a href="https://htseq.readthedocs.io/en/release_0.10.0/index.html" rel="external nofollow noopener noreferrer" target="_blank">HTSeq</a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。</p>
 <a id="more"></a>
+<p>官网：<a href="https://ccb.jhu.edu/software/hisat2/index.shtml" rel="external nofollow noopener noreferrer" target="_blank">HISAT2</a></p>
 <hr>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>HTSeq作为Python库推荐采用pip安装方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install htseq</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>还能采用源码安装、conda安装、apt-get等</p>
-</blockquote>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">htseq-count [options] &lt;alignment_file&gt; &lt;gtf_file&gt;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这里的 alignment file 可以是 bam 或者 sam 文件</p>
-</blockquote>
-<h3 id="上游准备"><a href="#上游准备" class="headerlink" title="上游准备"></a>上游准备</h3><ol>
-<li>已排序的比对文件： sam 或者 bam 文件</li>
-<li>排序要求建议按 reads name 排序</li>
-<li>计数模型：union, intersection-strict and intersection-nonempty<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/HTSeq/2013053-b58df35852061ed0.webp" alt="Count_model"></li>
-<li>测序的建库工作是否为链特异性建库，一般不是</li>
-<li>参数 type 和 idattr 的确定，非 Ensemble 的注释文件这两个参数尚待明确，知道的麻烦告知一下，提前感谢！<h3 id="下游适配"><a href="#下游适配" class="headerlink" title="下游适配"></a>下游适配</h3>HTSeq 的计数结果没有进行标准化，因为我下游分析是采用 DESeq2，不需要标准化<h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 命令参数</span><br><span class="line">-f | --format default: sam 设置输入文件的格式，该参数的值可以是sam或bam。</span><br><span class="line">-r | --order default: name 设置sam或bam文件的排序方式，该参数的值可以是name或pos。前者表示按read名进行排序，后者表示按比对的参考基因组位置进行排序。若测序数据是双末端测序，当输入sam/bam文件是按pos方式排序的时候，两端reads的比对结果在sam/bam文件中一般不是紧邻的两行，程序会将reads对的第一个比对结果放入内存，直到读取到另一端read的比对结果。因此，选择pos可能会导致程序使用较多的内存，它也适合于未排序的sam/bam文件。而pos排序则表示程序认为双末端测序的reads比对结果在紧邻的两行上，也适合于单端测序的比对结果。很多其它表达量分析软件要求输入的sam/bam文件是按pos排序的，但HTSeq推荐使用name排序，且一般比对软件的默认输出结果也是按name进行排序的。</span><br><span class="line">-s | --stranded default: yes 设置是否是链特异性测序。该参数的值可以是yes,no或reverse。no表示非链特异性测序；若是单端测序，yes表示read比对到了基因的正义链上；若是双末端测序，yes表示read1比对到了基因正义链上，read2比对到基因负义链上；reverse表示双末端测序情况下与yes值相反的结果。根据说明文件的理解，一般情况下双末端链特异性测序，该参数的值应该选择reverse（本人暂时没有测试该参数）。</span><br><span class="line">-a | --a default: 10 忽略比对质量低于此值的比对结果。在0.5.4版本以前该参数默认值是0。</span><br><span class="line">-t | --type default: exon 程序会对该指定的feature（gtf/gff文件第三列）进行表达量计算，而gtf/gff文件中其它的feature都会被忽略。</span><br><span class="line">-i | --idattr default: gene_id 设置feature ID是由gtf/gff文件第9列那个标签决定的；若gtf/gff文件多行具有相同的feature ID，则它们来自同一个feature，程序会计算这些features的表达量之和赋给相应的feature ID。</span><br><span class="line">-m | --mode default: union 设置表达量计算模式。该参数的值可以有union, intersection-strict and intersection-nonempty。这三种模式的选择请见上面对这3种模式的示意图。从图中可知，对于原核生物，推荐使用intersection-strict模式；对于真核生物，推荐使用union模式。</span><br><span class="line">-o | --samout 输出一个sam文件，该sam文件的比对结果中多了一个XF标签，表示该read比对到了某个feature上。</span><br><span class="line">-q | --quiet 不输出程序运行的状态信息和警告信息。</span><br><span class="line">-h | --help 输出帮助信息。</span><br></pre></td></tr></table></figure>
+<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><ul>
+<li>源码编译</li>
+</ul>
+<ol>
+<li>下载：<a href="http://ccb.jhu.edu/software/hisat2/dl/hisat2-2.1.0-source.zip" rel="external nofollow noopener noreferrer" target="_blank">Source code</a></li>
+<li>解压 hisat2-2.1.0-source.zip</li>
+<li>切换到解压目录</li>
+<li>编译：目录下 make</li>
+<li>将 HISAT2 加入环境变量</li>
+</ol>
+<ul>
+<li>二进制文件</li>
+</ul>
+<ol>
+<li>下载：<a href="http://ccb.jhu.edu/software/hisat2/dl/hisat2-2.1.0-Linux_x86_64.zip" rel="external nofollow noopener noreferrer" target="_blank">Binary（Linux_x86_64）</a></li>
+<li>解压 hisat2-2.1.0-Linux_x86_64.zip，包含下面用到的文件（hisat2、xx.py、hisat2-build等）</li>
+</ol>
+<h2 id="建立索引"><a href="#建立索引" class="headerlink" title="建立索引"></a>建立索引</h2><p>需要参考序列（注释文件）。先建立基因组、转录组、SNP的索引文件，再建立其索引（以下代码在终端中运行，注意你的参考基因组等文件存放位置可能与我不同）。</p>
+<ol>
+<li><p>建立基因组的索引文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd hisat2-2.1.0-Linux_x86_64</span><br><span class="line">extract_exons.py Homo_sapiens.GRCh38.83.chr.gtf &gt; genome.exon</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立转录组的索引文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extract_splice_sites.py Homo_sapiens.GRCh38.83.chr.gtf &gt; genome.ss</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立SNP的索引文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extract_snps.py snp142Common.txt &gt; genome.snp</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立索引：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hisat2-build -p 4 genome.fa --snp genome.snp --ss genome.ss --exon genome.exon genome_snp_tran</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<h2 id="批量化处理"><a href="#批量化处理" class="headerlink" title="批量化处理"></a>批量化处理</h2><p>借助bash：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">for i in 10 11; do</span><br><span class="line">    &#123;</span><br><span class="line">    htseq-count -f bam -s no in/E$&#123;i&#125;.sorted.bam\</span><br><span class="line">    anno/Gallus_gallus.Gallus_gallus-5.0.94.gtf &gt; out/E$&#123;i&#125;_count.txt</span><br><span class="line">    &#125;;</span><br><span class="line">done</span><br><span class="line">wait</span><br></pre></td></tr></table></figure>
-
 <blockquote>
-<p>此处参考基因组来自于 Ensemble，而 -t 和 -i 在采用 Ensemble 的注释文件时默认为：exon 和 gene_id</p>
+<p>-p 指定线程数，genome_snp_tran 为索引的名称<br>在第四步时，如果没有前三步会自动建立起 exon、snp、splice sites 文件及其索引，但是提前建立会提高分析效率<br>前三步在过程中会占用一定的磁盘空间，我的磁盘空间有所不足，所以我选择直接采用第四步，有条件的尽量。所以注释文件可不下载</p>
 </blockquote>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>结果文件为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">head counts.txt</span><br><span class="line">ENSG00000000003 0</span><br><span class="line">ENSG00000000005 0</span><br><span class="line">ENSG00000000419 1171</span><br><span class="line">ENSG00000000457 563</span><br><span class="line">ENSG00000000460 703</span><br><span class="line">ENSG00000000938 0</span><br><span class="line">ENSG00000000971 1</span><br><span class="line">ENSG00000001036 925</span><br><span class="line">ENSG00000001084 1468</span><br><span class="line">ENSG00000001167 2997</span><br><span class="line"> </span><br><span class="line">tail count.txt</span><br><span class="line">ENSG00000283696 18</span><br><span class="line">ENSG00000283697 0</span><br><span class="line">ENSG00000283698 1</span><br><span class="line">ENSG00000283699 0</span><br><span class="line">ENSG00000283700 0</span><br><span class="line">__no_feature    3469791</span><br><span class="line">__ambiguous 630717</span><br><span class="line">__too_low_aQual 1346501</span><br><span class="line">__not_aligned   520623</span><br><span class="line">__alignment_not_unique  2849422</span><br></pre></td></tr></table></figure>
+<h2 id="比对"><a href="#比对" class="headerlink" title="比对"></a>比对</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hisat2 -p 16 -x ./grch38_tran/genome_tran -1 SRR534293_1.fastq -2 SRR534293_2.fastq –S SRR534293.sam</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>下游分析需要将其合并到一个文件中，一个行为基因名，列为样本名，中间为 count 的行列式文件。这里也可以将其中 count 为零的行删除。所以应该是先合并、再删除计数全为零的行。</p>
-</blockquote>
+<p>注： -p 线程数。-1 fastq文件，-2 另一端fastq文件（支持gzip文件）。-S 输出的SAM文件。</p>
+<h2 id="结合samtools"><a href="#结合samtools" class="headerlink" title="结合samtools"></a>结合samtools</h2><p>HISAT2通过管道符（|）与samtools结合，将HISAT2输出的SAM文件排序、转化为BAM文件，加速分析流程、节约硬盘空间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hisat2 -p 4 -x index/genome -1 in/out.E10_1.fq.gz -2 in/out.E10_2.fq.gz | samtools sort -n -o \</span><br><span class="line">out/E10.sorted.bam</span><br></pre></td></tr></table></figure>
+
+<h2 id="批量化处理"><a href="#批量化处理" class="headerlink" title="批量化处理"></a>批量化处理</h2><p>借助bash，批量化处理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">for i in 10 11; do</span><br><span class="line">    &#123;</span><br><span class="line">    hisat2-2.1.0/hisat2 -p 4 -x index/genome -1 in/out.E$&#123;i&#125;_1.fq.gz -2 in/out.E$&#123;i&#125;_2.fq.gz \</span><br><span class="line">    | samtools sort -n -o out/E$&#123;i&#125;.sorted.bam</span><br><span class="line">    &#125;;</span><br><span class="line">done</span><br><span class="line">wait</span><br></pre></td></tr></table></figure>
+
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://www.cnblogs.com/triple-y/p/9338890.html" rel="external nofollow noopener noreferrer" target="_blank">RNA-seq分析htseq-count的使用</a></li>
-<li><a href="https://www.jianshu.com/p/aa7e019ca8a3" rel="external nofollow noopener noreferrer" target="_blank">RNA-seq流程分析比较之半小时得到差异基因</a></li>
-<li><a href="https://www.jianshu.com/p/e9742bbf83b9" rel="external nofollow noopener noreferrer" target="_blank">转录组入门(6)： reads计数</a></li>
-<li><a href="https://htseq.readthedocs.io/en/release_0.10.0/tour.html#" rel="external nofollow noopener noreferrer" target="_blank">官网</a></li>
+<li>官网：<a href="https://ccb.jhu.edu/software/hisat2/index.shtml" rel="external nofollow noopener noreferrer" target="_blank">HISAT2</a></li>
+<li><a href="https://blog.csdn.net/qq_40280759/article/details/80552193" rel="external nofollow noopener noreferrer" target="_blank">比对软件hisat2的使用</a></li>
+<li><a href="https://blog.csdn.net/ygyxl/article/details/74375031" rel="external nofollow noopener noreferrer" target="_blank">HISAT2-StringTie-Ballgown有参转录组数据分析</a></li>
+<li><a href="https://www.jianshu.com/p/479c7b576e6f" rel="external nofollow noopener noreferrer" target="_blank">RNA-seq(5):序列比对：Hisat2</a></li>
 </ol>
 
       
@@ -580,7 +592,7 @@
       <div class="post-tags">
         <center>
         
-          <a href="/tags/count-reads/" rel="tag"><i class="fa fa-tag"></i> count reads</a>
+          <a href="/tags/Mapping/" rel="tag"><i class="fa fa-tag"></i> Mapping</a>
         
         </center>
       </div>
@@ -606,7 +618,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://www.zjohnson.top/RNA-seq/HTSeq-count.html" title="Gene expression levels analysis -- HTSeq-count">https://www.zjohnson.top/RNA-seq/HTSeq-count.html</a>
+    <a href="https://www.zjohnson.top/RNA-seq/HISAT2概述.html" title="Mapping -- HISAT2">https://www.zjohnson.top/RNA-seq/HISAT2概述.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -720,8 +732,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/RNA-seq/HISAT2.html" rel="next" title="Mapping -- HISAT2">
-                <i class="fa fa-chevron-left"></i> Mapping -- HISAT2
+              <a href="/RNA-seq/Fastp概述.html" rel="next" title="Quality control -- Fastp">
+                <i class="fa fa-chevron-left"></i> Quality control -- Fastp
               </a>
             
           </div>
@@ -730,8 +742,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/RNA-seq/DESeq2.html" rel="prev" title="Differential expression analysis -- DESeq2">
-                Differential expression analysis -- DESeq2 <i class="fa fa-chevron-right"></i>
+              <a href="/RNA-seq/HTSeq-count概述.html" rel="prev" title="Gene expression levels analysis -- HTSeq-count">
+                Gene expression levels analysis -- HTSeq-count <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -809,7 +821,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -887,7 +899,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">22</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -963,7 +981,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上游准备"><span class="nav-number">3.1.</span> <span class="nav-text">上游准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下游适配"><span class="nav-number">3.2.</span> <span class="nav-text">下游适配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用参数"><span class="nav-number">3.3.</span> <span class="nav-text">常用参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批量化处理"><span class="nav-number">4.</span> <span class="nav-text">批量化处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出"><span class="nav-number">5.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载安装"><span class="nav-number">2.</span> <span class="nav-text">下载安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立索引"><span class="nav-number">3.</span> <span class="nav-text">建立索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比对"><span class="nav-number">4.</span> <span class="nav-text">比对</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结合samtools"><span class="nav-number">5.</span> <span class="nav-text">结合samtools</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批量化处理"><span class="nav-number">6.</span> <span class="nav-text">批量化处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

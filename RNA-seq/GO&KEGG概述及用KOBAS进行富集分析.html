@@ -112,28 +112,31 @@
 
 
 
-  <meta name="description" content="前言DESeq2 是一款基于负二项分布的R包，对于 count data 进行处理，用于 RNA-seq 基因差异分析。">
-<meta name="keywords" content="Differential expression analysis">
+  <meta name="description" content="前言GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。">
+<meta name="keywords" content="Enrichment analysis,KOBAS,Webgestalt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Differential expression analysis -- DESeq2">
-<meta property="og:url" content="https://www.zjohnson.top/RNA-seq/DESeq2.html">
+<meta property="og:title" content="Enrichment analysis of GO &amp; KEGG">
+<meta property="og:url" content="https://www.zjohnson.top/RNA-seq/GO&KEGG概述及用KOBAS进行富集分析.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
-<meta property="og:description" content="前言DESeq2 是一款基于负二项分布的R包，对于 count data 进行处理，用于 RNA-seq 基因差异分析。">
+<meta property="og:description" content="前言GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/DESeq2/count_data.jpg">
-<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/DESeq2/coldata.JPG">
-<meta property="og:updated_time" content="2018-12-20T11:58:32.190Z">
+<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS1.jpeg">
+<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS2.png">
+<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS3.jpeg">
+<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS4.jpeg">
+<meta property="og:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/webgestalt.png">
+<meta property="og:updated_time" content="2019-05-16T14:09:17.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Differential expression analysis -- DESeq2">
-<meta name="twitter:description" content="前言DESeq2 是一款基于负二项分布的R包，对于 count data 进行处理，用于 RNA-seq 基因差异分析。">
-<meta name="twitter:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/DESeq2/count_data.jpg">
+<meta name="twitter:title" content="Enrichment analysis of GO &amp; KEGG">
+<meta name="twitter:description" content="前言GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。">
+<meta name="twitter:image" content="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS1.jpeg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.zjohnson.top/RNA-seq/DESeq2.html">
+  <link rel="canonical" href="https://www.zjohnson.top/RNA-seq/GO&KEGG概述及用KOBAS进行富集分析.html">
 
 
 
@@ -143,7 +146,7 @@
   };
 </script>
 
-  <title>Differential expression analysis -- DESeq2 | ZJohnsonの海马体</title>
+  <title>Enrichment analysis of GO & KEGG | ZJohnsonの海马体</title>
   
 
 
@@ -409,7 +412,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.zjohnson.top/RNA-seq/DESeq2.html">
+    <link itemprop="mainEntityOfPage" href="https://www.zjohnson.top/RNA-seq/GO&KEGG概述及用KOBAS进行富集分析.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZJohnson">
@@ -426,7 +429,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Differential expression analysis -- DESeq2
+          <h2 class="post-title" itemprop="name headline">Enrichment analysis of GO & KEGG
               
             
           </h2>
@@ -451,7 +454,7 @@
                 
               
 
-              <time title="创建时间：2018-12-19 20:52:11" itemprop="dateCreated datePublished" datetime="2018-12-19T20:52:11+08:00">2018-12-19</time>
+              <time title="创建时间：2018-12-20 16:23:30" itemprop="dateCreated datePublished" datetime="2018-12-20T16:23:30+08:00">2018-12-20</time>
             
 
             
@@ -484,8 +487,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/RNA-seq/DESeq2.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/RNA-seq/DESeq2.html" itemprop="commentCount"></span>
+                <a href="/RNA-seq/GO&KEGG概述及用KOBAS进行富集分析.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/RNA-seq/GO&KEGG概述及用KOBAS进行富集分析.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -520,40 +523,30 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>DESeq2 是一款基于负二项分布的R包，对于 count data 进行处理，用于 RNA-seq 基因差异分析。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。</p>
 <a id="more"></a>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>RGUI中输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))</span><br><span class="line">    install.packages(&quot;BiocManager&quot;)</span><br><span class="line">BiocManager::install(&quot;DESeq2&quot;, version = &quot;3.8&quot;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="矩阵准备"><a href="#矩阵准备" class="headerlink" title="矩阵准备"></a>矩阵准备</h2><h3 id="1-载入表达矩阵"><a href="#1-载入表达矩阵" class="headerlink" title="1. 载入表达矩阵"></a>1. 载入表达矩阵</h3><p>表达矩阵的数据结构：<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/DESeq2/count_data.jpg" alt="Count_data"></p>
-<blockquote>
-<p>gene 列为基因 ensemble_id，后几个列名为样本名称，中间为 count（次数）</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>GO是Gene ontology的缩写，是一系列用来描述基因、基因产物特性的语义（terms）。这些语义主要分为三种：细胞组份（Cellular Component，简称 GO-CC），用于描述基因产物在细胞中的位置，如内质网，核或蛋白酶体等；分子功能(Molecular Function，简称 GO-MF)，大部分指的是单个基因产物的功能，如结合活性或催化活性等。 生物学途径/过程 (biological process，简称 GO-BP)，多是指具有多个步骤的有序的生物过程，如细胞生长、分化和维持、凋亡以及信号传导等过程。</p>
+<p>Pathway指代谢通路，对差异基因进行pathway分析，可以知道实验条件下哪些代谢通路发生显著改变。KEGG（ Kyoto Encyclopedia of Genes and Genomes），是一个系统分析基因产物在细胞中代谢途径的数据库，是一种最常用的代谢通路分析。</p>
+<h2 id="在线分析"><a href="#在线分析" class="headerlink" title="在线分析"></a>在线分析</h2><p>分析方式有很多，例如：神包 clusterProfiler，DAVID，KOBAS，webgestalt<br>这里分别使用 KOBAS 和 webgestalt</p>
+<h3 id="KOBAS"><a href="#KOBAS" class="headerlink" title="KOBAS"></a>KOBAS</h3><p><a href="http://kobas.cbi.pku.edu.cn/anno_iden.php" rel="external nofollow noopener noreferrer" target="_blank">KOBAS</a></p>
+<ol>
+<li>输入id：<br>选择 id 类型、输入物种、输入id：<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS1.jpeg" alt="KOBAS：输入id"></li>
+<li>选择分析类型：<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS2.png" alt="KOBAS：选择分析类型"></li>
+<li>结果：<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS3.jpeg" alt="KOBAS：结果"></li>
+<li>查看：<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/KOBAS4.jpeg" alt="KOBAS：查看"><blockquote>
+<p>我点击通路名称时，得到404，可能是偶然因素</p>
 </blockquote>
-<h3 id="2-设置分组信息"><a href="#2-设置分组信息" class="headerlink" title="2. 设置分组信息"></a>2. 设置分组信息</h3><p>分组信息的结构：<br><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/DESeq2/coldata.JPG" alt="Coldata"></p>
+</li>
+</ol>
+<h3 id="Webgestalt"><a href="#Webgestalt" class="headerlink" title="Webgestalt"></a>Webgestalt</h3><p><img src="https://blog-1257871194.cos.ap-beijing.myqcloud.com/RNA-seq/GO%26KEGG/webgestalt.png" alt="WSAT"><br>选择物种、分析方式、数据库、输入 ID 类型、参考序列</p>
 <blockquote>
-<p>id 列为样本名称，后几列的列名为因素</p>
+<p>分析方式 ORA 或者 GSEA<br>当选择数据库为 pathway，再选 KEGG 时，可做 KEGG 通路富集分析<br>参考序列可自定义上传</p>
 </blockquote>
-<h2 id="核心步骤"><a href="#核心步骤" class="headerlink" title="核心步骤"></a>核心步骤</h2><h3 id="1-载入数据"><a href="#1-载入数据" class="headerlink" title="1.载入数据"></a>1.载入数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">options(stringsAsFactors = FALSE)</span><br><span class="line"># 载入 count 文件（由 htseq-count 计数，未标准化），sep 指定分隔符，col.names 指定列名</span><br><span class="line"># 一个因素：种类 bec 和 lyec，三个生物学重复</span><br><span class="line">ten &lt;- read.table(&quot;E:/RNA-SEQ/4.0deseq/E10_count.txt&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;bec1&quot;))</span><br><span class="line">ele &lt;- read.table(&quot;E:/RNA-SEQ/4.0deseq/E11_count.txt&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;bec2&quot;))</span><br><span class="line">fif &lt;- read.table(&quot;E:/RNA-SEQ/4.0deseq/E15_count.txt&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;bec3&quot;))</span><br><span class="line">six &lt;- read.table(&quot;E:/RNA-SEQ/4.0deseq/E16_count.txt&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;lyec1&quot;))</span><br><span class="line">eig &lt;- read.table(&quot;E:/RNA-SEQ/4.0deseq/E18_count.txt&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;lyec2&quot;))</span><br><span class="line">thi &lt;- read.table(&quot;E:/RNA-SEQ/4.0deseq/E13_count.txt&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;lyec3&quot;))</span><br><span class="line"># 合并各个表达矩阵，一次性合并报错了（估计是行数不统一问题）</span><br><span class="line">all &lt;- merge(ten, ele, by=&quot;gene_id&quot;)</span><br><span class="line">all &lt;- merge(all, fif, by=&quot;gene_id&quot;)</span><br><span class="line">all &lt;- merge(all, six, by=&quot;gene_id&quot;)</span><br><span class="line">all &lt;- merge(all, eig, by=&quot;gene_id&quot;)</span><br><span class="line">all &lt;- merge(all, thi, by=&quot;gene_id&quot;)</span><br><span class="line"># 把 ensemble_id 作为行号</span><br><span class="line">rownames(all) &lt;- all[,1]</span><br><span class="line"># 把 ensemble_id 列删除，因为已经由行号来表示</span><br><span class="line">all = all[,-1]</span><br><span class="line"># 删除整行 count 皆为零的行</span><br><span class="line">all = all[rowSums(all) &gt;0,]</span><br><span class="line"># 删除 count 文件最后五行的结果统计</span><br><span class="line">all = all[-1,]</span><br><span class="line">all = all[-1,]</span><br><span class="line">all = all[-1,]</span><br><span class="line">all = all[-1,]</span><br><span class="line">all = all[-1,]</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置分组信息"><a href="#设置分组信息" class="headerlink" title="设置分组信息"></a>设置分组信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># rep 指定生物学重复数</span><br><span class="line">condition &lt;- factor(c(rep(&quot;bec&quot;,3),rep(&quot;lyec&quot;,3)), levels = c(&quot;bec&quot;,&quot;lyec&quot;))</span><br><span class="line"># 创建 colData</span><br><span class="line">colData &lt;- data.frame(row.names=colnames(all), condition)</span><br></pre></td></tr></table></figure>
-
-<h3 id="构建-dds（DESeqDataSet）"><a href="#构建-dds（DESeqDataSet）" class="headerlink" title="构建 dds（DESeqDataSet）"></a>构建 dds（DESeqDataSet）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 载入包</span><br><span class="line">library(DESeq2)</span><br><span class="line"># 构建 dds</span><br><span class="line">dds &lt;- DESeqDataSetFromMatrix(all, colData, design= ~ condition)</span><br><span class="line">dds &lt;- DESeq(dds)</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">res= results(dds)  # 或者 res = results(dds, contrast=c(&quot;condition&quot;, &quot;bec&quot;, &quot;lyec&quot;))</span><br><span class="line"># 根据 p-value 排序</span><br><span class="line">res = res[order(res$pvalue),]</span><br><span class="line"># 显示一共多少个 genes 上调和下调（FDR0.1）</span><br><span class="line">summary(res)</span><br><span class="line"># 保存为文件</span><br><span class="line">write.csv(res,file=&quot;All_results.csv&quot;)</span><br><span class="line"># padj小于0.05的 genes</span><br><span class="line">table(res$padj&lt;0.05)</span><br></pre></td></tr></table></figure>
-
-<h3 id="提取差异基因"><a href="#提取差异基因" class="headerlink" title="提取差异基因"></a>提取差异基因</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># padj&lt;0.05 且 表达倍数取以2为对数后大于1或者小于-1的差异表达基因</span><br><span class="line">diff_gene_deseq2 &lt;-subset(res, padj &lt; 0.05 &amp; abs(log2FoldChange) &gt; 1)</span><br><span class="line"># 保存差异表达基因的结果</span><br><span class="line">write.csv(diff_gene_deseq2,file= &quot;DEGs_BEC_vs_LYEC.csv&quot;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="gene-symbol-注释"><a href="#gene-symbol-注释" class="headerlink" title="gene symbol 注释"></a>gene symbol 注释</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 载入包，没安装的百度包名，进入 Bioconductor 安装</span><br><span class="line">library(&apos;biomaRt&apos;)</span><br><span class="line">library(&quot;curl&quot;)</span><br><span class="line"># 重新载入差异表达基因，head=T：将首行作为列名</span><br><span class="line">DEG &lt;- read.table(&quot;E:/RNA-SEQ/4.0deseq/DEGs_BEC_vs_LYEC.csv&quot;, sep=&quot;,&quot;, head = T)</span><br><span class="line"># 查看有哪些数据库可用</span><br><span class="line">ensembl=useMart(&quot;ensembl&quot;)</span><br><span class="line"># 查看需要用到的物种的数据集</span><br><span class="line">listDatasets(ensembl) </span><br><span class="line"># ggallus_gene_ensembl：鸡的数据集，数据库选择 ensemble</span><br><span class="line">mart &lt;- useDataset(&quot;ggallus_gene_ensembl&quot;, useMart(&quot;ensembl&quot;))</span><br><span class="line"># 将 id 赋值给 my_ensembl_gene_id</span><br><span class="line">my_ensembl_gene_id&lt;-DEG[,1]</span><br><span class="line"># 注释结果</span><br><span class="line">gg_symbols&lt;- getBM(attributes=c(&apos;ensembl_gene_id&apos;,&apos;external_gene_name&apos;,&quot;description&quot;),filters = &apos;ensembl_gene_id&apos;, values = my_ensembl_gene_id, mart = mart)</span><br></pre></td></tr></table></figure>
-
-<h3 id="合并差异基因和注释结果"><a href="#合并差异基因和注释结果" class="headerlink" title="合并差异基因和注释结果"></a>合并差异基因和注释结果</h3><p>被合并的两个表要有共同的列和列名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 按 ensembl_gene_id 合并，如果表不大可用 Excel 插入共同的列和列名</span><br><span class="line">DEG_ann&lt;-merge(DEG,gg_symbols,by=&quot;ensembl_gene_id&quot;)</span><br><span class="line"># 将合并结果保存为文件</span><br><span class="line">write.csv(DEG_ann,file= &quot;DEGs_BEC_vs_LYEC_ANN.csv&quot;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="下游分析"><a href="#下游分析" class="headerlink" title="下游分析"></a>下游分析</h2><p>GO 和 KEGG 富集分析（也可以有蛋白网络互作分析）</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://www.jianshu.com/p/3a0e1e3e41d0" rel="external nofollow noopener noreferrer" target="_blank">RNA-seq(7): DEseq2筛选差异表达基因并注释(bioMart)</a></li>
-<li><a href="http://www.bioinfo-scrounger.com/archives/113" rel="external nofollow noopener noreferrer" target="_blank">简单使用DESeq2/EdgeR做差异分析</a></li>
-<li><a href="http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html" rel="external nofollow noopener noreferrer" target="_blank">Bioconductor:DESeq2</a></li>
-<li><a href="https://www.jianshu.com/p/a8ac3219b0c8" rel="external nofollow noopener noreferrer" target="_blank">RNA_seq分析流程软件思维导图</a></li>
+<li><a href="http://www.cnblogs.com/leezx/p/6297593.html" rel="external nofollow noopener noreferrer" target="_blank">GO KEGG数据库用法 | 基因集功能注释 | 代谢通路富集</a></li>
+<li><a href="http://www.sohu.com/a/259564063_653813" rel="external nofollow noopener noreferrer" target="_blank">零基础的小白如何自己做GO/KEGG分析？</a></li>
+<li><a href="http://www.sohu.com/a/259841271_100070734" rel="external nofollow noopener noreferrer" target="_blank">GO、KEGG富集分析——DAVID与KOBAS在线分析工具</a></li>
+<li><a href="https://www.jianshu.com/p/056902a2e3a9" rel="external nofollow noopener noreferrer" target="_blank">推荐神包：clusterProfiler包做GO分析</a></li>
 </ol>
 
       
@@ -575,7 +568,11 @@
       <div class="post-tags">
         <center>
         
-          <a href="/tags/Differential-expression-analysis/" rel="tag"><i class="fa fa-tag"></i> Differential expression analysis</a>
+          <a href="/tags/Enrichment-analysis/" rel="tag"><i class="fa fa-tag"></i> Enrichment analysis</a>
+        
+          <a href="/tags/KOBAS/" rel="tag"><i class="fa fa-tag"></i> KOBAS</a>
+        
+          <a href="/tags/Webgestalt/" rel="tag"><i class="fa fa-tag"></i> Webgestalt</a>
         
         </center>
       </div>
@@ -601,7 +598,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://www.zjohnson.top/RNA-seq/DESeq2.html" title="Differential expression analysis -- DESeq2">https://www.zjohnson.top/RNA-seq/DESeq2.html</a>
+    <a href="https://www.zjohnson.top/RNA-seq/GO&KEGG概述及用KOBAS进行富集分析.html" title="Enrichment analysis of GO & KEGG">https://www.zjohnson.top/RNA-seq/GO&KEGG概述及用KOBAS进行富集分析.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -715,8 +712,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/RNA-seq/HTSeq-count.html" rel="next" title="Gene expression levels analysis -- HTSeq-count">
-                <i class="fa fa-chevron-left"></i> Gene expression levels analysis -- HTSeq-count
+              <a href="/RNA-seq/DESeq2概述.html" rel="next" title="Differential expression analysis -- DESeq2">
+                <i class="fa fa-chevron-left"></i> Differential expression analysis -- DESeq2
               </a>
             
           </div>
@@ -725,8 +722,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/RNA-seq/GO-&-KEGG.html" rel="prev" title="Enrichment analysis of GO & KEGG">
-                Enrichment analysis of GO & KEGG <i class="fa fa-chevron-right"></i>
+              <a href="/Poetry/12.22-12.24有感而写的诗.html" rel="prev" title="During 12.22-12.24">
+                During 12.22-12.24 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -804,7 +801,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -882,7 +879,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">22</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -958,7 +961,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵准备"><span class="nav-number">3.</span> <span class="nav-text">矩阵准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-载入表达矩阵"><span class="nav-number">3.1.</span> <span class="nav-text">1. 载入表达矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-设置分组信息"><span class="nav-number">3.2.</span> <span class="nav-text">2. 设置分组信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#核心步骤"><span class="nav-number">4.</span> <span class="nav-text">核心步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-载入数据"><span class="nav-number">4.1.</span> <span class="nav-text">1.载入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置分组信息"><span class="nav-number">4.2.</span> <span class="nav-text">设置分组信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建-dds（DESeqDataSet）"><span class="nav-number">4.3.</span> <span class="nav-text">构建 dds（DESeqDataSet）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果"><span class="nav-number">4.4.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取差异基因"><span class="nav-number">4.5.</span> <span class="nav-text">提取差异基因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gene-symbol-注释"><span class="nav-number">4.6.</span> <span class="nav-text">gene symbol 注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并差异基因和注释结果"><span class="nav-number">4.7.</span> <span class="nav-text">合并差异基因和注释结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下游分析"><span class="nav-number">5.</span> <span class="nav-text">下游分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">2.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在线分析"><span class="nav-number">3.</span> <span class="nav-text">在线分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#KOBAS"><span class="nav-number">3.1.</span> <span class="nav-text">KOBAS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Webgestalt"><span class="nav-number">3.2.</span> <span class="nav-text">Webgestalt</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

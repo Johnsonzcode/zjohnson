@@ -1,13 +1,12 @@
 https://www.zjohnson.top/RNA-seq/RNA-seq数据初步分析流程1.html
 https://www.zjohnson.top/RNA-seq/HISAT2报错解决.html
-https://www.zjohnson.top/RNA-seq/HISAT2debug.html
 https://www.zjohnson.top/RNA-seq/利用IGV判断测序是否为链特异性测序.html
-https://www.zjohnson.top/RNA-seq/samtools.html
-https://www.zjohnson.top/Linux/linux.html
-https://www.zjohnson.top/Poetry/During-12.22-12.24.html
-https://www.zjohnson.top/RNA-seq/GO-&-KEGG.html
-https://www.zjohnson.top/RNA-seq/DESeq2.html
-https://www.zjohnson.top/RNA-seq/HTSeq-count.html
-https://www.zjohnson.top/RNA-seq/HISAT2.html
-https://www.zjohnson.top/RNA-seq/Fastp.html
+https://www.zjohnson.top/RNA-seq/Samtools0.19和HTSeq0.6.1p1报错的解决方案.html
+https://www.zjohnson.top/Linux/Linux 常用指令.html
+https://www.zjohnson.top/Poetry/12.22-12.24有感而写的诗.html
+https://www.zjohnson.top/RNA-seq/GO&KEGG概述及用KOBAS进行富集分析.html
+https://www.zjohnson.top/RNA-seq/DESeq2概述.html
+https://www.zjohnson.top/RNA-seq/HTSeq-count概述.html
+https://www.zjohnson.top/RNA-seq/HISAT2概述.html
+https://www.zjohnson.top/RNA-seq/Fastp概述.html
 https://www.zjohnson.top/Hexo/hello-world.html

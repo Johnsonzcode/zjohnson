@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="报错信息：Error while flushing and closing outputterminate called recursivelyterminate called after throwing an instance of ‘int’(ERR): hisat2-align died with signal 6 (ABRT) (core dumped) 原因及解决方案：硬盘不足，腾出空">
+  <meta name="description" content="报错信息： Error while flushing and closing outputterminate called recursivelyterminate called after throwing an instance of ‘int’(ERR): hisat2-align died with signal 6 (ABRT) (core dumped) Error:Encounter">
 <meta name="keywords" content="HISAT2,报错">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HISAT2报错解决">
 <meta property="og:url" content="https://www.zjohnson.top/RNA-seq/HISAT2报错解决.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
-<meta property="og:description" content="报错信息：Error while flushing and closing outputterminate called recursivelyterminate called after throwing an instance of ‘int’(ERR): hisat2-align died with signal 6 (ABRT) (core dumped) 原因及解决方案：硬盘不足，腾出空">
+<meta property="og:description" content="报错信息： Error while flushing and closing outputterminate called recursivelyterminate called after throwing an instance of ‘int’(ERR): hisat2-align died with signal 6 (ABRT) (core dumped) Error:Encounter">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-16T12:12:01.373Z">
+<meta property="og:updated_time" content="2019-05-16T14:11:37.620Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HISAT2报错解决">
-<meta name="twitter:description" content="报错信息：Error while flushing and closing outputterminate called recursivelyterminate called after throwing an instance of ‘int’(ERR): hisat2-align died with signal 6 (ABRT) (core dumped) 原因及解决方案：硬盘不足，腾出空">
+<meta name="twitter:description" content="报错信息： Error while flushing and closing outputterminate called recursivelyterminate called after throwing an instance of ‘int’(ERR): hisat2-align died with signal 6 (ABRT) (core dumped) Error:Encounter">
 
 
 
@@ -517,8 +517,12 @@
       
 
       
-        <h1 id="报错信息："><a href="#报错信息：" class="headerlink" title="报错信息："></a>报错信息：</h1><p>Error while flushing and closing output<br>terminate called recursively<br>terminate called after throwing an instance of ‘int’<br>(ERR): hisat2-align died with signal 6 (ABRT) (core dumped)</p>
-<h1 id="原因及解决方案："><a href="#原因及解决方案：" class="headerlink" title="原因及解决方案："></a>原因及解决方案：</h1><p>硬盘不足，腾出空间即可，或者先把hisat2的已经运行完整的sam文件转为bam文件，可节约空间。</p>
+        <h1 id="报错信息："><a href="#报错信息：" class="headerlink" title="报错信息："></a>报错信息：</h1><ol>
+<li>Error while flushing and closing output<br>terminate called recursively<br>terminate called after throwing an instance of ‘int’<br>(ERR): hisat2-align died with signal 6 (ABRT) (core dumped)</li>
+<li>Error:Encountered internal HISAT2 exception (#1)<h1 id="原因及解决方案："><a href="#原因及解决方案：" class="headerlink" title="原因及解决方案："></a>原因及解决方案：</h1></li>
+<li>硬盘不足，腾出空间即可，或者先把hisat2的已经运行完整的sam文件转为bam文件，可节约空间。</li>
+<li>遇到此类报错，原因是输入了不能识别的参数，包括空格（多、少）、符号（短横线、双短横线、逗号等）。请仔细检查命令行的输入。</li>
+</ol>
 
       
     </div>
@@ -681,8 +685,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/RNA-seq/HISAT2debug.html" rel="next" title="HISAT2报错:Error:Encountered internal HISAT2 exception (#1)">
-                <i class="fa fa-chevron-left"></i> HISAT2报错:Error:Encountered internal HISAT2 exception (#1)
+              <a href="/RNA-seq/利用IGV判断测序是否为链特异性测序.html" rel="next" title="利用IGV判断测序是否为链特异性测序">
+                <i class="fa fa-chevron-left"></i> 利用IGV判断测序是否为链特异性测序
               </a>
             
           </div>
@@ -770,7 +774,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -848,7 +852,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">22</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
