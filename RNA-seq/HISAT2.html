@@ -113,14 +113,14 @@
 
 
   <meta name="description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
-<meta name="keywords" content="Alignment,Mapping">
+<meta name="keywords" content="Mapping">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mapping -- HISAT2">
 <meta property="og:url" content="https://www.zjohnson.top/RNA-seq/HISAT2.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
 <meta property="og:description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-19T12:50:26.962Z">
+<meta property="og:updated_time" content="2019-05-16T11:07:59.832Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mapping -- HISAT2">
 <meta name="twitter:description" content="前言针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。">
@@ -517,7 +517,9 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。<br><a id="more"></a><br>官网：<a href="https://ccb.jhu.edu/software/hisat2/index.shtml" rel="external nofollow noopener noreferrer" target="_blank">HISAT2</a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>针对一般人类群体（以及有参考基因组的群体），HISAT2是一种快速灵敏的比对程序，用于绘制第二代测序序列（全基因组，转录组和外显子组测序数据）。是有参转录组常用的比对软件（无参常用bowtie2），HISAT2是TopHat2/Bowtie2的继任者，使用改进的BWT算法，实现了更快的速度和更少的资源占用。</p>
+<a id="more"></a>
+<p>官网：<a href="https://ccb.jhu.edu/software/hisat2/index.shtml" rel="external nofollow noopener noreferrer" target="_blank">HISAT2</a></p>
 <hr>
 <h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><ul>
 <li>源码编译</li>
@@ -549,15 +551,21 @@
 </li>
 <li><p>建立索引：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hisat2-build -p 4 genome.fa --snp genome.snp --ss genome.ss --exon genome.exon genome_snp_tran</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <blockquote>
 <p>-p 指定线程数，genome_snp_tran 为索引的名称<br>在第四步时，如果没有前三步会自动建立起 exon、snp、splice sites 文件及其索引，但是提前建立会提高分析效率<br>前三步在过程中会占用一定的磁盘空间，我的磁盘空间有所不足，所以我选择直接采用第四步，有条件的尽量。所以注释文件可不下载</p>
 </blockquote>
 <h2 id="比对"><a href="#比对" class="headerlink" title="比对"></a>比对</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hisat2 -p 16 -x ./grch38_tran/genome_tran -1 SRR534293_1.fastq -2 SRR534293_2.fastq –S SRR534293.sam</span><br></pre></td></tr></table></figure>
+
 <p>注： -p 线程数。-1 fastq文件，-2 另一端fastq文件（支持gzip文件）。-S 输出的SAM文件。</p>
-<h2 id="结合samtools"><a href="#结合samtools" class="headerlink" title="结合samtools"></a>结合samtools</h2><p>HISAT2通过管道符（|）与samtools结合，将HISAT2输出的SAM文件排序、转化为BAM文件，加速分析流程、节约硬盘空间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hisat2 -p 4 -x index/genome -1 in/out.E10_1.fq.gz -2 in/out.E10_2.fq.gz | samtools sort -n -o \</span><br><span class="line">out/E10.sorted.bam</span><br></pre></td></tr></table></figure></p>
-<h2 id="批量化处理"><a href="#批量化处理" class="headerlink" title="批量化处理"></a>批量化处理</h2><p>借助bash，批量化处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">for i in 10 11; do</span><br><span class="line">    &#123;</span><br><span class="line">    hisat2-2.1.0/hisat2 -p 4 -x index/genome -1 in/out.E$&#123;i&#125;_1.fq.gz -2 in/out.E$&#123;i&#125;_2.fq.gz \</span><br><span class="line">    | samtools sort -n -o out/E$&#123;i&#125;.sorted.bam</span><br><span class="line">    &#125;;</span><br><span class="line">done</span><br><span class="line">wait</span><br></pre></td></tr></table></figure></p>
+<h2 id="结合samtools"><a href="#结合samtools" class="headerlink" title="结合samtools"></a>结合samtools</h2><p>HISAT2通过管道符（|）与samtools结合，将HISAT2输出的SAM文件排序、转化为BAM文件，加速分析流程、节约硬盘空间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hisat2 -p 4 -x index/genome -1 in/out.E10_1.fq.gz -2 in/out.E10_2.fq.gz | samtools sort -n -o \</span><br><span class="line">out/E10.sorted.bam</span><br></pre></td></tr></table></figure>
+
+<h2 id="批量化处理"><a href="#批量化处理" class="headerlink" title="批量化处理"></a>批量化处理</h2><p>借助bash，批量化处理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">for i in 10 11; do</span><br><span class="line">    &#123;</span><br><span class="line">    hisat2-2.1.0/hisat2 -p 4 -x index/genome -1 in/out.E$&#123;i&#125;_1.fq.gz -2 in/out.E$&#123;i&#125;_2.fq.gz \</span><br><span class="line">    | samtools sort -n -o out/E$&#123;i&#125;.sorted.bam</span><br><span class="line">    &#125;;</span><br><span class="line">done</span><br><span class="line">wait</span><br></pre></td></tr></table></figure>
+
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
 <li>官网：<a href="https://ccb.jhu.edu/software/hisat2/index.shtml" rel="external nofollow noopener noreferrer" target="_blank">HISAT2</a></li>
 <li><a href="https://blog.csdn.net/qq_40280759/article/details/80552193" rel="external nofollow noopener noreferrer" target="_blank">比对软件hisat2的使用</a></li>
@@ -583,8 +591,6 @@
     
       <div class="post-tags">
         <center>
-        
-          <a href="/tags/Alignment/" rel="tag"><i class="fa fa-tag"></i> Alignment</a>
         
           <a href="/tags/Mapping/" rel="tag"><i class="fa fa-tag"></i> Mapping</a>
         
@@ -815,7 +821,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -893,9 +899,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

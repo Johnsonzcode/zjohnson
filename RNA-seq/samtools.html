@@ -517,7 +517,8 @@
       
 
       
-        <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>因学习需要，使用 samtools 0.19和HTSeq0.6.1p1，遇上几个不常见的报错信息。特做记录。<br><a id="more"></a></p>
+        <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>因学习需要，使用 samtools 0.19和HTSeq0.6.1p1，遇上几个不常见的报错信息。特做记录。</p>
+<a id="more"></a>
 <h1 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h1><ol>
 <li><strong>samtools sort乱码</strong><br>表现：终端在最后完成排序后不断输出乱码<br>原因：0.19版本的samtools没有添加 -o 选项，现在的教程都添加了这个参数。<br>解决方案：去掉 -o 参数，直接接排序完成的文件名前缀（除.bam之外的部分）</li>
 <li><strong>HTSeq 0.6.1p1计数报错1</strong><br>报错信息：Warning: Read HWI-D00523:166:C7106ANXX:1:2104:4424:74281 claims to have an aligned mate which could not be found in an adjacent line.<br>原因：tophat2的结果默认按染色体位置排序，而没有按read name排序，HTSeq检测到了孤立的read（在双端数据中）<br>解决方案：htseq之前用samtools按reads排序</li>
@@ -777,7 +778,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -855,9 +856,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
