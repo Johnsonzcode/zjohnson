@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.zjohnson.top/about/index.html</loc>
+    
+    <lastmod>2019-08-15T08:09:09.330Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.zjohnson.top/friends/index.html</loc>
     
     <lastmod>2019-08-15T07:48:16.396Z</lastmod>
@@ -82,13 +89,6 @@
     <loc>https://www.zjohnson.top/RNA-seq/%E5%88%A9%E7%94%A8IGV%E5%88%A4%E6%96%AD%E6%B5%8B%E5%BA%8F%E6%98%AF%E5%90%A6%E4%B8%BA%E9%93%BE%E7%89%B9%E5%BC%82%E6%80%A7%E6%B5%8B%E5%BA%8F.html</loc>
     
     <lastmod>2019-04-08T13:51:43.165Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.zjohnson.top/about/index.html</loc>
-    
-    <lastmod>2019-03-13T02:36:02.182Z</lastmod>
     
   </url>
   
