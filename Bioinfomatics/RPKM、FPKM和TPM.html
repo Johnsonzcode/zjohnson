@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="前言在重复Nature Prtocol的RNAseq流程中看到了FPKM，就想起来了这三个概念。现在把它们分辨清楚。 定义RPKM：Reads per kilobase of exon per million reads mapped；每一百万比对的reads中，其中外显子的每一千个碱基中reads的条数。FPKM：Fragments per kilobase of exon per millio">
+  <meta name="description" content="前言在重复Nature Prtocol的RNAseq流程中看到了FPKM，就想起来了这三个概念。现在把它们分辨清楚。">
 <meta name="keywords" content="知识点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RPKM、FPKM和TPM">
 <meta property="og:url" content="https://www.zjohnson.top/Bioinfomatics/RPKM、FPKM和TPM.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
-<meta property="og:description" content="前言在重复Nature Prtocol的RNAseq流程中看到了FPKM，就想起来了这三个概念。现在把它们分辨清楚。 定义RPKM：Reads per kilobase of exon per million reads mapped；每一百万比对的reads中，其中外显子的每一千个碱基中reads的条数。FPKM：Fragments per kilobase of exon per millio">
+<meta property="og:description" content="前言在重复Nature Prtocol的RNAseq流程中看到了FPKM，就想起来了这三个概念。现在把它们分辨清楚。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-08T07:07:22.733Z">
+<meta property="og:updated_time" content="2019-09-15T03:18:04.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RPKM、FPKM和TPM">
-<meta name="twitter:description" content="前言在重复Nature Prtocol的RNAseq流程中看到了FPKM，就想起来了这三个概念。现在把它们分辨清楚。 定义RPKM：Reads per kilobase of exon per million reads mapped；每一百万比对的reads中，其中外显子的每一千个碱基中reads的条数。FPKM：Fragments per kilobase of exon per millio">
+<meta name="twitter:description" content="前言在重复Nature Prtocol的RNAseq流程中看到了FPKM，就想起来了这三个概念。现在把它们分辨清楚。">
 
 
 
@@ -518,6 +518,8 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在重复Nature Prtocol的RNAseq流程中看到了FPKM，就想起来了这三个概念。现在把它们分辨清楚。</p>
+<a id="more"></a>
+
 <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>RPKM：Reads per kilobase of exon per million reads mapped；<br>每一百万比对的reads中，其中外显子的每一千个碱基中reads的条数。<br>FPKM：Fragments per kilobase of exon per million reads mapped；<br>每一百万比对的fragments中，其中外显子的每一千个碱基中fragments的条数，注意其中将比对到一个fragment上的两个reads计算一次。<br>TPM：Transcripts per million reads。<br>每一百万条reads中转录本的个数。</p>
 <h2 id="计算过程"><a href="#计算过程" class="headerlink" title="计算过程"></a>计算过程</h2><p>因为在对基因或者转录本标准化的过程中，基因长度和测序深度影响较大。<br>RPKM和FPKM都是先将测序深度标准化，即每个样本的每个基因的reads count数同时除以总的样本各自的总reads count数。再进行基因长度的标准化，将上一步得到的结果除以该基因的长度即可。<br>TPM的计算类似，但是计算顺序不同，先除以该基因的长度，即先进行基因长度的标准化，再除以标准化后的总reads count数，即后进行测序深度的标准化。<br>此处可以得到，RPKM和FPKM在进行标准化后的每个样本的reads count之和并不完全相等。而TPM的每个样本的reads count之和是相等的，可以直接用作比较。<br>现在很多软件可以直接处理原始的reads count，有的则只能处理RPKM/FPKM。注意分辨。</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.genek.tv/article/23" rel="external nofollow noopener noreferrer" target="_blank">RNA-Seq分析|RPKM, FPKM, TPM, 傻傻分不清楚？</a><br><a href="http://www.360doc.com/content/18/0112/02/50153987_721216719.shtml" rel="external nofollow noopener noreferrer" target="_blank">RPKM vs FPKM vs TPM</a></p>

@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="起因服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。 1$ conda install openssl=1.0  解决方案 最后找到原因：~/.condarc中源的顺序很讲究： 1234channels:  - conda-forge  - bioconda  - defaults  另外还有一种解决方案：找到更高版本的库，然后在需要的目录中创建软连">
+  <meta name="description" content="起因服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。">
 <meta name="keywords" content="报错解决">
 <meta property="og:type" content="article">
 <meta property="og:title" content="缺少库libssl.so和libcrypto.so">
 <meta property="og:url" content="https://www.zjohnson.top/Linux/缺少库libssl.so和libcrypto.so.html">
 <meta property="og:site_name" content="ZJohnsonの海马体">
-<meta property="og:description" content="起因服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。 1$ conda install openssl=1.0  解决方案 最后找到原因：~/.condarc中源的顺序很讲究： 1234channels:  - conda-forge  - bioconda  - defaults  另外还有一种解决方案：找到更高版本的库，然后在需要的目录中创建软连">
+<meta property="og:description" content="起因服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-15T03:14:30.125Z">
+<meta property="og:updated_time" content="2019-09-15T03:18:23.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="缺少库libssl.so和libcrypto.so">
-<meta name="twitter:description" content="起因服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。 1$ conda install openssl=1.0  解决方案 最后找到原因：~/.condarc中源的顺序很讲究： 1234channels:  - conda-forge  - bioconda  - defaults  另外还有一种解决方案：找到更高版本的库，然后在需要的目录中创建软连">
+<meta name="twitter:description" content="起因服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。">
 
 
 
@@ -518,6 +518,7 @@
 
       
         <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。</p>
+<a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda install openssl=1.0</span><br></pre></td></tr></table></figure>
 
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
