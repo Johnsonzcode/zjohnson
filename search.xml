@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[缺少库libssl.so和libcrypto.so]]></title>
+    <url>%2FLinux%2F%E7%BC%BA%E5%B0%91%E5%BA%93libssl.so%E5%92%8Clibcrypto.so.html</url>
+    <content type="text"><![CDATA[起因服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。 1$ conda install openssl=1.0 解决方案 最后找到原因：~/.condarc中源的顺序很讲究： 1234channels: - conda-forge - bioconda - defaults 另外还有一种解决方案：找到更高版本的库，然后在需要的目录中创建软连接，且名字改为aria2需要的版本。 1$ ln -s xx/xx/libcrypto.so.1.x.x libcrypto.so.1.0.0 查依赖库1$ ldd $(which aria2) 参考samtools 1.9 dependency pulls in wrong version of openssl]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>报错解决</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Pychrm pro 2019.1下载安装及永久破解]]></title>
+    <url>%2FPC%2FPycharm.html</url>
+    <content type="text"><![CDATA[前言近期需要安装Pycharm，有强迫症要安装最新版本，又想要永久破解。学习了好久，终于成功了。还是激活码给力，其他的地方也有新的发现。 下载安装点我下载内含安装包，注册码，语言包。 安装根据自己需要安装，到最后点我稍后重启； 注册码不用其中的，用这个： 1D00F1BDTGF-eyJsaWNlbnNlSWQiOiJEMDBGMUJEVEdGIiwibGljZW5zZWVOYW1lIjoiaHR0cHM6Ly96aGlsZS5pbyIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiJVbmxpbWl0ZWQgbGljZW5zZSB0aWxsIGVuZCBvZiB0aGUgY2VudHVyeS4iLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IklJIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlMwIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiV1MiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJSRCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiREMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJEQiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJNIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiRE0iLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkRQTiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkdPIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUFMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlBDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlNVIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In1dLCJoYXNoIjoiODkwNzA3MC8wIiwiZ3JhY2VQZXJpb2REYXlzIjowLCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-3OPFIX9/KSL76ctAKOwpBPCCAfUhUbucdNbtqMaTqRryvKEvrFqCKncE0eMHA2YkrcP2CtV9LKjlIXhJMqp0N821Qv1AhuIJrDMBubqiEtiqnGkcGV35DF0GzyUQaUdN6fTbZna05riHzR6yzgEzo9R3RIzCTDMQdB/0EojWM0nCBkPsLdncZeDv3+Y+VA8ZH3/BBvzwR1e0gWsT3mfT9tIvwxPuEhNrQFNOP1PZOjC8nX9h/J7ag5X3JQL1CQVi4TnEipdy0fxKbDPKTloM3Y/bA23uaW+Q/JQFBRKRR0q3FYJ1DQuSc7YmeJ7Q2IHq7u5QYz8jPZJtP6PKs6g/tQ==-MIIECDCCAfCgAwIBAgIJAI5/xwNtz47cMA0GCSqGSIb3DQEBCwUAMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0EwIBcNMTgwODIzMDcwNDA3WhgPMjExODA3MzAwNzA0MDdaMBExDzANBgNVBAMMBnByb2QzeTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOZ3WopNRg9J8k3apGYFEUGRlvkRsQnQSEz1yMKY4YWg9ElxmuF0mQRAaIj3WOl1eqTn1CXsn4vXV7GODJk9A/rCqEk960sPesWn/RVz7zo5+KazE3Y9yYtwskKxlnkFNp82Kha6dUGDSwG2lYh0Sria2ByOhgr6gmyXtC0PKqlIlTAPcBvz0MEnKTZkxfSqdiHo/meTlMRd9885vr4P52Fd9Ryxe3yVAKZSP9ZzPmRvCvgF1oGCgobZJ5d7FvTwkGt2t4pjy/RlU6FDcXNMHLk4pfJqr3lnEkAh2MbCGlGo1i6Rc6DtgISuJn2AUkrQKhI6F0U7o9e5qPEOjNkhznMCAwEAAaNaMFgwCQYDVR0TBAIwADALBgNVHQ8EBAMCBaAwHQYDVR0OBBYEFJDgSMx4XrLktYOG827wP7VULTnJMB8GA1UdIwQYMBaAFDAS51akWaJlzxC2x4yP3iAYbqtxMA0GCSqGSIb3DQEBCwUAA4ICAQBxRyfCpL7q2VurGfh9XqaC4GsGp6ut3l/rOEyc6DP148A69DRmZ7saqfZW87DcLkmcynPhyBOxdcGwtwKlR9E/+X923JeL6VPQCTY5WyJKib36vQCnoC4ELTnw1yc51v2j+MaZXjrlzBIcCUocWK14WS4iBycUwLuMszz6rJ8xluuYDKDeNcS/AjQf+yTUfDXjktHLgcE27sSEQUQ+7bpbKHkJ5xBvaupJEPX+ndj7V2eD+/sO03jgnsWVa2nky7yDXX/5KCqzL5kAA1n2t2dWSJXxpac8O2bPyRhk6dUSwzNr+IjCjHqUKIouB0nosi85Q5MaIE0pwOOSggnawpnjmL3qDnsS/n7NUcX/mF4eiNQ8cMJmKIgfS6rntKuQY2zSod+4+G0AFbiihVTnKsRf7CiJa/VniZdaGdbclT8KzRnNKJ1TrPO8rVPjg+SpvqTq75xynS08/OXCpoJ3aVeBWZJYJmheHhvJw2RiNW2P2GSIw+m6HIIsthUtvvHqdKpIaThFHAOKmw0LpPO7uGs/z/Q3un7+lqSlW7akUoSCHdiAJ4wWv+qFEgE4mq8bKtHoa9yy6FZBoORbbRTj8WkS+UvCLN5p7kZenmKYnWCzBf02O1ULpMsR5WvKCGCekSwWf3lAF9lYTL12JaFTw9iH1nSkyvcu7AoXlWI50hOhmA== 汉化语言包放在Pycharm的安装目录下，默认的是C:\Program Files\JetBrains\PyCharm 2019.1\lib。 注意自己的安装路径 破解补丁链接: https://pan.baidu.com/s/1yNGyJGtcmzED-aoGye7Qhg 提取码: kbt9将它放在C:\Program Files\JetBrains\PyCharm 2019.1\bin下。把其中的pycharm64.exe.vmoptions末尾添加一行： 1-javaagent:C:\Program Files\JetBrains\PyCharm 2019.1\bin\JetbrainsCrack-release-enc.jar 注意自己的安装路径 破解顺序 正常安装 放入破解补丁，改pycharm64.exe.vmoptions文件 屏蔽检测：在C:\Windows\System32\drivers\etc\HOSTS末尾添加（文本编辑器打开）123#pycharm0.0.0.0 account.jetbrains.com0.0.0.0 www.jetbrains.com 在命令提示符中输入ipconfig /flushdns刷新。 打开在Activate code填入上方的注册码 结果这样一来，可以用到2089年。说不定可以送走一些人，哈哈哈哈哈哈 参考1.Pycharm2019.1永久激活2.pycharm 2019中文破解版 新的发现有的激活码可能用不了多久，或者已经终止授权，此处可以利用屏蔽效果来截断授权的验证以达到激活成功的目的。即点击激活的同时将hosts更改且刷新DNS。]]></content>
+      <categories>
+        <category>PC</category>
+      </categories>
+      <tags>
+        <tag>Pycharm pro 2019.1</tag>
+        <tag>永久破解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[RPKM、FPKM和TPM]]></title>
+    <url>%2FBioinfomatics%2FRPKM%E3%80%81FPKM%E5%92%8CTPM.html</url>
+    <content type="text"><![CDATA[前言在重复Nature Prtocol的RNAseq流程中看到了FPKM，就想起来了这三个概念。现在把它们分辨清楚。 定义RPKM：Reads per kilobase of exon per million reads mapped；每一百万比对的reads中，其中外显子的每一千个碱基中reads的条数。FPKM：Fragments per kilobase of exon per million reads mapped；每一百万比对的fragments中，其中外显子的每一千个碱基中fragments的条数，注意其中将比对到一个fragment上的两个reads计算一次。TPM：Transcripts per million reads。每一百万条reads中转录本的个数。 计算过程因为在对基因或者转录本标准化的过程中，基因长度和测序深度影响较大。RPKM和FPKM都是先将测序深度标准化，即每个样本的每个基因的reads count数同时除以总的样本各自的总reads count数。再进行基因长度的标准化，将上一步得到的结果除以该基因的长度即可。TPM的计算类似，但是计算顺序不同，先除以该基因的长度，即先进行基因长度的标准化，再除以标准化后的总reads count数，即后进行测序深度的标准化。此处可以得到，RPKM和FPKM在进行标准化后的每个样本的reads count之和并不完全相等。而TPM的每个样本的reads count之和是相等的，可以直接用作比较。现在很多软件可以直接处理原始的reads count，有的则只能处理RPKM/FPKM。注意分辨。 参考RNA-Seq分析|RPKM, FPKM, TPM, 傻傻分不清楚？RPKM vs FPKM vs TPM]]></content>
+      <categories>
+        <category>Bioinfomatics</category>
+      </categories>
+      <tags>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[搭建Aria2满速下载神器]]></title>
     <url>%2FPC-Tools%2F%E6%90%AD%E5%BB%BAAria2%E6%BB%A1%E9%80%9F%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8.html</url>
-    <content type="text"><![CDATA[前言恰逢新装百兆宽带，无奈下载的资源仍然被限速，尤其是遇到某盘的资源。更是焦头烂额。早听闻Aria2可以完全发挥宽带潜能，但无奈搭建还是有几分复杂（其实我懒）。前几日耐着性子把它搭建好。 本地配置点击下载这是官方资源，然后选择自己的版本。需要在aria2c.exe所在目录中新建aria2.conf、aria2.session和Star.bat文件，新建download目录。 aria.conf文件参照这里设置。 aria2.session保持为空文件即可，不能启动Aria2时，删除重建。 Star.bat内容如下： 1aria2c.exe --conf=aria2.conf 需要隐藏CMD窗口新建HideRun.vbs，内容为： 1CreateObject(&quot;WScript.Shell&quot;).Run &quot;aria2c.exe的完整路径 --conf-path=aria2.conf&quot;,0 最好将下载的资源放在分区根目录，且重命名为aria2，不然容易出现未知的不能搭建的错误。 WebGUI配置这里有现成的已汉化控制台：http://aria2c.com 使用方法 双击Star.bat 在WebGUI中添加任务 浏览器插件BaiduExporter：将百度云盘资源添加到Aria2下载任务中。下载器：将浏览器下载任务转移到Aria2 参考aria2使用教程Aria2 &amp; YAAW 使用说明]]></content>
+    <content type="text"><![CDATA[前言恰逢新装百兆宽带，无奈下载的资源仍然被限速，尤其是遇到某盘的资源。更是焦头烂额。早听闻Aria2可以完全发挥宽带潜能，但无奈搭建还是有几分复杂（其实我懒）。前几日耐着性子把它搭建好。 本地配置点击下载这是官方资源，然后选择自己的版本。需要在aria2c.exe所在目录中新建aria2.conf、aria2.session和Star.bat文件，新建download目录。 aria.conf文件参照这里设置。 aria2.session保持为空文件即可，不能启动Aria2时，删除重建。 Star.bat内容如下： 1aria2c.exe --conf=aria2.conf 需要隐藏CMD窗口新建HideRun.vbs，内容为： 1CreateObject(&quot;WScript.Shell&quot;).Run &quot;aria2c.exe的完整路径 --conf-path=aria2.conf&quot;,0 最好将下载的资源放在分区根目录，且重命名为aria2，不然容易出现未知的不能搭建的错误。 WebGUI配置这里有现成的已汉化控制台：http://aria2c.com 使用方法 双击Star.bat 打开 http://aria2c.com ，在其中添加下载任务 浏览器插件BaiduExporter：将百度云盘资源添加到Aria2下载任务中。下载器：将浏览器下载任务转移到Aria2 参考aria2使用教程Aria2 &amp; YAAW 使用说明]]></content>
       <categories>
         <category>PC Tools</category>
       </categories>
@@ -14,22 +48,22 @@
   <entry>
     <title><![CDATA[RNA-seq数据初步分析流程1]]></title>
     <url>%2FRNA-seq%2FRNA-seq%E6%95%B0%E6%8D%AE%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B1.html</url>
-    <content type="text"><![CDATA[前言]]></content>
+    <content type="text"><![CDATA[前言花了四个月左右时间做的毕设，到现在才有时间（其实我懒）记录过程。]]></content>
       <categories>
         <category>RNA-seq</category>
       </categories>
       <tags>
         <tag>Differential expression analysis</tag>
+        <tag>Mapping</tag>
         <tag>Fastp</tag>
         <tag>Quality control</tag>
-        <tag>Enrichment analysis</tag>
-        <tag>KOBAS</tag>
-        <tag>Mapping</tag>
         <tag>Count reads</tag>
+        <tag>Enrichment analysis</tag>
         <tag>TopHat2</tag>
         <tag>Cufflinks</tag>
         <tag>HTSeq</tag>
         <tag>DESeq</tag>
+        <tag>KOBAS</tag>
       </tags>
   </entry>
   <entry>
@@ -84,7 +118,7 @@
   <entry>
     <title><![CDATA[During 12.22-12.24]]></title>
     <url>%2FPoetry%2F12.22-12.24%E6%9C%89%E6%84%9F%E8%80%8C%E5%86%99%E7%9A%84%E8%AF%97.html</url>
-    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-AZawQArV"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-ajOthsnv"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>

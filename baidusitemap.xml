@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.zjohnson.top/Linux/%E7%BC%BA%E5%B0%91%E5%BA%93libssl.so%E5%92%8Clibcrypto.so.html</loc>
+    <lastmod>2019-09-15</lastmod>
+  </url>  <url>
+    <loc>https://www.zjohnson.top/PC/Pycharm.html</loc>
+    <lastmod>2019-09-08</lastmod>
+  </url>  <url>
+    <loc>https://www.zjohnson.top/Bioinfomatics/RPKM%E3%80%81FPKM%E5%92%8CTPM.html</loc>
+    <lastmod>2019-09-08</lastmod>
+  </url>  <url>
+    <loc>https://www.zjohnson.top/RNA-seq/RNA-seq%E6%95%B0%E6%8D%AE%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B1.html</loc>
+    <lastmod>2019-08-18</lastmod>
+  </url>  <url>
     <loc>https://www.zjohnson.top/PC-Tools/%E6%90%AD%E5%BB%BAAria2%E6%BB%A1%E9%80%9F%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8.html</loc>
     <lastmod>2019-08-17</lastmod>
   </url>  <url>
@@ -29,9 +41,6 @@
     <lastmod>2019-05-16</lastmod>
   </url>  <url>
     <loc>https://www.zjohnson.top/RNA-seq/Samtools0.19%E5%92%8CHTSeq0.6.1p1%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</loc>
-    <lastmod>2019-05-16</lastmod>
-  </url>  <url>
-    <loc>https://www.zjohnson.top/RNA-seq/RNA-seq%E6%95%B0%E6%8D%AE%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B1.html</loc>
     <lastmod>2019-05-16</lastmod>
   </url>  <url>
     <loc>https://www.zjohnson.top/RNA-seq/%E5%88%A9%E7%94%A8IGV%E5%88%A4%E6%96%AD%E6%B5%8B%E5%BA%8F%E6%98%AF%E5%90%A6%E4%B8%BA%E9%93%BE%E7%89%B9%E5%BC%82%E6%80%A7%E6%B5%8B%E5%BA%8F.html</loc>
