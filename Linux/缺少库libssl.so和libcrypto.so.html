@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="ZJohnsonの海马体">
 <meta property="og:description" content="起因服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。 1$ conda install openssl=1.0  解决方案 最后找到原因：~/.condarc中源的顺序很讲究： 1234channels:  - conda-forge  - bioconda  - defaults  另外还有一种解决方案：找到更高版本的库，然后在需要的目录中创建软连">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-15T03:03:24.676Z">
+<meta property="og:updated_time" content="2019-09-15T03:14:30.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="缺少库libssl.so和libcrypto.so">
 <meta name="twitter:description" content="起因服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。 1$ conda install openssl=1.0  解决方案 最后找到原因：~/.condarc中源的顺序很讲究： 1234channels:  - conda-forge  - bioconda  - defaults  另外还有一种解决方案：找到更高版本的库，然后在需要的目录中创建软连">
@@ -531,7 +531,7 @@
 </ol>
 <h2 id="查依赖库"><a href="#查依赖库" class="headerlink" title="查依赖库"></a>查依赖库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ldd $(<span class="built_in">which</span> aria2)</span><br></pre></td></tr></table></figure>
 
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/bioconda/bioconda-recipes/issues/12100" rel="external nofollow noopener noreferrer" target="_blank">samtools 1.9 dependency pulls in wrong version of openssl </a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/bioconda/bioconda-recipes/issues/12100" rel="external nofollow noopener noreferrer" target="_blank">samtools 1.9 dependency pulls in wrong version of openssl </a><br><a href="https://bbs.archlinux.org/viewtopic.php?id=94902&p=3" rel="external nofollow noopener noreferrer" target="_blank">pacman: error while loading shared libraries: libssl.so.0.9.8</a></p>
 
       
     </div>
