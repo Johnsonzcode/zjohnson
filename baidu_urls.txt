@@ -1,5 +1,6 @@
+https://www.zjohnson.top/Python/Python曲线平滑处理.html
 https://www.zjohnson.top/Linux/缺少库libssl.so和libcrypto.so.html
-https://www.zjohnson.top/PC/Pycharm.html
+https://www.zjohnson.top/PC-Tools/Pycharm.html
 https://www.zjohnson.top/Bioinfomatics/RPKM、FPKM和TPM.html
 https://www.zjohnson.top/PC-Tools/搭建Aria2满速下载神器.html
 https://www.zjohnson.top/RNA-seq/RNA-seq数据初步分析流程1.html

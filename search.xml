@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python曲线平滑处理]]></title>
+    <url>%2FPython%2FPython%E6%9B%B2%E7%BA%BF%E5%B9%B3%E6%BB%91%E5%A4%84%E7%90%86.html</url>
+    <content type="text"><![CDATA[背景在用Python画函数图形时发现曲线不平滑，百度发现解决方案核心思想是插值法，即将定义域的取值点增加到原来的100倍甚至以上，即可达到曲线平滑的目的。所以仅仅需要增加取值点的个数。 代码示例1234567891011121314151617181920212223# quantitative genetics homeworkimport numpy as npimport matplotlib.pyplot as pltplt.title("Effect of selection on gene frequency for different initial frequencies")plt.xlabel("Frequency of A2")plt.ylabel("Δq")q = np.arange(0, 1.01, 0.01)#真实取值点个数为（1.01-0）/0.01qt = np.arange(0, 1.1, 0.1)#x轴画出的单位长度为0.1，范围在（0, 1.0），1.1不取plt.xticks(qt)#途中所展示单位长度p = 1 - qs = 0.2Q1 = s*q**2*(1-q)/(1-s*(1-q**2))plt.plot(q, Q1)Q2 = p*q*(s*p-s*q)/(1-s*p**2-s*q**2)plt.plot(q, Q2)y = np.arange(-0.023, 0.035, 0.002)plt.yticks(y)plt.grid()plt.show() 图像展示 参考Python如何对折线进行平滑曲线处理？]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[缺少库libssl.so和libcrypto.so]]></title>
     <url>%2FLinux%2F%E7%BC%BA%E5%B0%91%E5%BA%93libssl.so%E5%92%8Clibcrypto.so.html</url>
     <content type="text"><![CDATA[起因服务器上安装Aria2需要这两个库，网上检索到仅需要安装openssl即可，但是尝试后并没成功。 1$ conda install openssl=1.0 解决方案 最后找到原因：~/.condarc中源的顺序很讲究： 1234channels: - conda-forge - bioconda - defaults 另外还有一种解决方案：找到更高版本的库，然后在需要的目录中创建软连接，且名字改为aria2需要的版本。 1$ ln -s xx/xx/libcrypto.so.1.x.x libcrypto.so.1.0.0 查依赖库1$ ldd $(which aria2) 参考samtools 1.9 dependency pulls in wrong version of openssl pacman: error while loading shared libraries: libssl.so.0.9.8]]></content>
@@ -13,10 +24,10 @@
   </entry>
   <entry>
     <title><![CDATA[Pychrm pro 2019.1下载安装及永久破解]]></title>
-    <url>%2FPC%2FPycharm.html</url>
+    <url>%2FPC-Tools%2FPycharm.html</url>
     <content type="text"><![CDATA[前言近期需要安装Pycharm，有强迫症要安装最新版本，又想要永久破解。学习了好久，终于成功了。还是激活码给力，其他的地方也有新的发现。 下载安装点我下载内含安装包，注册码，语言包。 安装根据自己需要安装，到最后点我稍后重启； 注册码不用其中的，用这个： 1D00F1BDTGF-eyJsaWNlbnNlSWQiOiJEMDBGMUJEVEdGIiwibGljZW5zZWVOYW1lIjoiaHR0cHM6Ly96aGlsZS5pbyIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiJVbmxpbWl0ZWQgbGljZW5zZSB0aWxsIGVuZCBvZiB0aGUgY2VudHVyeS4iLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IklJIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlMwIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiV1MiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJSRCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiREMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJEQiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJNIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiRE0iLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkRQTiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkdPIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUFMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlBDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlNVIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In1dLCJoYXNoIjoiODkwNzA3MC8wIiwiZ3JhY2VQZXJpb2REYXlzIjowLCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-3OPFIX9/KSL76ctAKOwpBPCCAfUhUbucdNbtqMaTqRryvKEvrFqCKncE0eMHA2YkrcP2CtV9LKjlIXhJMqp0N821Qv1AhuIJrDMBubqiEtiqnGkcGV35DF0GzyUQaUdN6fTbZna05riHzR6yzgEzo9R3RIzCTDMQdB/0EojWM0nCBkPsLdncZeDv3+Y+VA8ZH3/BBvzwR1e0gWsT3mfT9tIvwxPuEhNrQFNOP1PZOjC8nX9h/J7ag5X3JQL1CQVi4TnEipdy0fxKbDPKTloM3Y/bA23uaW+Q/JQFBRKRR0q3FYJ1DQuSc7YmeJ7Q2IHq7u5QYz8jPZJtP6PKs6g/tQ==-MIIECDCCAfCgAwIBAgIJAI5/xwNtz47cMA0GCSqGSIb3DQEBCwUAMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0EwIBcNMTgwODIzMDcwNDA3WhgPMjExODA3MzAwNzA0MDdaMBExDzANBgNVBAMMBnByb2QzeTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOZ3WopNRg9J8k3apGYFEUGRlvkRsQnQSEz1yMKY4YWg9ElxmuF0mQRAaIj3WOl1eqTn1CXsn4vXV7GODJk9A/rCqEk960sPesWn/RVz7zo5+KazE3Y9yYtwskKxlnkFNp82Kha6dUGDSwG2lYh0Sria2ByOhgr6gmyXtC0PKqlIlTAPcBvz0MEnKTZkxfSqdiHo/meTlMRd9885vr4P52Fd9Ryxe3yVAKZSP9ZzPmRvCvgF1oGCgobZJ5d7FvTwkGt2t4pjy/RlU6FDcXNMHLk4pfJqr3lnEkAh2MbCGlGo1i6Rc6DtgISuJn2AUkrQKhI6F0U7o9e5qPEOjNkhznMCAwEAAaNaMFgwCQYDVR0TBAIwADALBgNVHQ8EBAMCBaAwHQYDVR0OBBYEFJDgSMx4XrLktYOG827wP7VULTnJMB8GA1UdIwQYMBaAFDAS51akWaJlzxC2x4yP3iAYbqtxMA0GCSqGSIb3DQEBCwUAA4ICAQBxRyfCpL7q2VurGfh9XqaC4GsGp6ut3l/rOEyc6DP148A69DRmZ7saqfZW87DcLkmcynPhyBOxdcGwtwKlR9E/+X923JeL6VPQCTY5WyJKib36vQCnoC4ELTnw1yc51v2j+MaZXjrlzBIcCUocWK14WS4iBycUwLuMszz6rJ8xluuYDKDeNcS/AjQf+yTUfDXjktHLgcE27sSEQUQ+7bpbKHkJ5xBvaupJEPX+ndj7V2eD+/sO03jgnsWVa2nky7yDXX/5KCqzL5kAA1n2t2dWSJXxpac8O2bPyRhk6dUSwzNr+IjCjHqUKIouB0nosi85Q5MaIE0pwOOSggnawpnjmL3qDnsS/n7NUcX/mF4eiNQ8cMJmKIgfS6rntKuQY2zSod+4+G0AFbiihVTnKsRf7CiJa/VniZdaGdbclT8KzRnNKJ1TrPO8rVPjg+SpvqTq75xynS08/OXCpoJ3aVeBWZJYJmheHhvJw2RiNW2P2GSIw+m6HIIsthUtvvHqdKpIaThFHAOKmw0LpPO7uGs/z/Q3un7+lqSlW7akUoSCHdiAJ4wWv+qFEgE4mq8bKtHoa9yy6FZBoORbbRTj8WkS+UvCLN5p7kZenmKYnWCzBf02O1ULpMsR5WvKCGCekSwWf3lAF9lYTL12JaFTw9iH1nSkyvcu7AoXlWI50hOhmA== 汉化语言包放在Pycharm的安装目录下，默认的是C:\Program Files\JetBrains\PyCharm 2019.1\lib。 注意自己的安装路径 破解补丁链接: https://pan.baidu.com/s/1yNGyJGtcmzED-aoGye7Qhg 提取码: kbt9将它放在C:\Program Files\JetBrains\PyCharm 2019.1\bin下。把其中的pycharm64.exe.vmoptions末尾添加一行： 1-javaagent:C:\Program Files\JetBrains\PyCharm 2019.1\bin\JetbrainsCrack-release-enc.jar 注意自己的安装路径 破解顺序 正常安装 放入破解补丁，改pycharm64.exe.vmoptions文件 屏蔽检测：在C:\Windows\System32\drivers\etc\HOSTS末尾添加（文本编辑器打开）123#pycharm0.0.0.0 account.jetbrains.com0.0.0.0 www.jetbrains.com 在命令提示符中输入ipconfig /flushdns刷新。 打开在Activate code填入上方的注册码 结果这样一来，可以用到2089年。说不定可以送走一些人，哈哈哈哈哈哈 参考1.Pycharm2019.1永久激活2.pycharm 2019中文破解版 新的发现有的激活码可能用不了多久，或者已经终止授权，此处可以利用屏蔽效果来截断授权的验证以达到激活成功的目的。即点击激活的同时将hosts更改且刷新DNS。]]></content>
       <categories>
-        <category>PC</category>
+        <category>PC Tools</category>
       </categories>
       <tags>
         <tag>Pycharm pro 2019.1</tag>
@@ -53,13 +64,13 @@
         <category>RNA-seq</category>
       </categories>
       <tags>
-        <tag>Differential expression analysis</tag>
         <tag>Enrichment analysis</tag>
         <tag>KOBAS</tag>
-        <tag>Fastp</tag>
-        <tag>Quality control</tag>
+        <tag>Differential expression analysis</tag>
         <tag>Mapping</tag>
+        <tag>Quality control</tag>
         <tag>Count reads</tag>
+        <tag>Fastp</tag>
         <tag>TopHat2</tag>
         <tag>Cufflinks</tag>
         <tag>HTSeq</tag>
@@ -74,8 +85,8 @@
         <category>RNA-seq</category>
       </categories>
       <tags>
+        <tag>报错解决</tag>
         <tag>HISAT2</tag>
-        <tag>报错</tag>
       </tags>
   </entry>
   <entry>
@@ -118,7 +129,7 @@
   <entry>
     <title><![CDATA[During 12.22-12.24]]></title>
     <url>%2FPoetry%2F12.22-12.24%E6%9C%89%E6%84%9F%E8%80%8C%E5%86%99%E7%9A%84%E8%AF%97.html</url>
-    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-WimWZsxW"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-MaZbXqWy"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>
@@ -182,8 +193,8 @@
         <category>RNA-seq</category>
       </categories>
       <tags>
-        <tag>Fastp</tag>
         <tag>Quality control</tag>
+        <tag>Fastp</tag>
       </tags>
   </entry>
 </search>

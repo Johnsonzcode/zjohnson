@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.zjohnson.top/PC/Pycharm.html</loc>
+    <loc>https://www.zjohnson.top/Python/Python%E6%9B%B2%E7%BA%BF%E5%B9%B3%E6%BB%91%E5%A4%84%E7%90%86.html</loc>
+    <lastmod>2019-09-29</lastmod>
+  </url>  <url>
+    <loc>https://www.zjohnson.top/RNA-seq/HISAT2%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3.html</loc>
+    <lastmod>2019-09-15</lastmod>
+  </url>  <url>
+    <loc>https://www.zjohnson.top/PC-Tools/Pycharm.html</loc>
     <lastmod>2019-09-15</lastmod>
   </url>  <url>
     <loc>https://www.zjohnson.top/Linux/%E7%BC%BA%E5%B0%91%E5%BA%93libssl.so%E5%92%8Clibcrypto.so.html</loc>
@@ -14,9 +20,6 @@
     <lastmod>2019-08-18</lastmod>
   </url>  <url>
     <loc>https://www.zjohnson.top/PC-Tools/%E6%90%AD%E5%BB%BAAria2%E6%BB%A1%E9%80%9F%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8.html</loc>
-    <lastmod>2019-08-17</lastmod>
-  </url>  <url>
-    <loc>https://www.zjohnson.top/RNA-seq/HISAT2%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3.html</loc>
     <lastmod>2019-08-17</lastmod>
   </url>  <url>
     <loc>https://www.zjohnson.top/Poetry/12.22-12.24%E6%9C%89%E6%84%9F%E8%80%8C%E5%86%99%E7%9A%84%E8%AF%97.html</loc>
