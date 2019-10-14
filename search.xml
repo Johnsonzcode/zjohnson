@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[释怀]]></title>
+    <url>%2FPoetry%2F%E9%87%8A%E6%80%80.html</url>
+    <content type="text"><![CDATA[唏嘘成愁 唯黄昏而思烛明 唯覆雪始念日暖唯放手方知情真 今困苦而怀峥嵘今飘零而涌乡愁 今孑然而徒唏嘘 var ap = new APlayer({ element: document.getElementById("aplayer-gGGLHHKV"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+      <categories>
+        <category>Poetry</category>
+      </categories>
+      <tags>
+        <tag>Lyric</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python曲线平滑处理]]></title>
     <url>%2FPython%2FPython%E6%9B%B2%E7%BA%BF%E5%B9%B3%E6%BB%91%E5%A4%84%E7%90%86.html</url>
     <content type="text"><![CDATA[背景在用Python画函数图形时发现曲线不平滑，百度发现解决方案核心思想是插值法，即将定义域的取值点增加到原来的100倍甚至以上，即可达到曲线平滑的目的。所以仅仅需要增加取值点的个数。 代码示例1234567891011121314151617181920212223# quantitative genetics homeworkimport numpy as npimport matplotlib.pyplot as pltplt.title("Effect of selection on gene frequency for different initial frequencies")plt.xlabel("Frequency of A2")plt.ylabel("Δq")q = np.arange(0, 1.01, 0.01)#真实取值点个数为（1.01-0）/0.01qt = np.arange(0, 1.1, 0.1)#x轴画出的单位长度为0.1，范围在（0, 1.0），1.1不取plt.xticks(qt)#途中所展示单位长度p = 1 - qs = 0.2Q1 = s*q**2*(1-q)/(1-s*(1-q**2))plt.plot(q, Q1)Q2 = p*q*(s*p-s*q)/(1-s*p**2-s*q**2)plt.plot(q, Q2)y = np.arange(-0.023, 0.035, 0.002)plt.yticks(y)plt.grid()plt.show() 图像展示 参考Python如何对折线进行平滑曲线处理？]]></content>
@@ -64,13 +75,13 @@
         <category>RNA-seq</category>
       </categories>
       <tags>
+        <tag>Differential expression analysis</tag>
+        <tag>Fastp</tag>
+        <tag>Quality control</tag>
+        <tag>Mapping</tag>
         <tag>Enrichment analysis</tag>
         <tag>KOBAS</tag>
-        <tag>Differential expression analysis</tag>
-        <tag>Mapping</tag>
-        <tag>Quality control</tag>
         <tag>Count reads</tag>
-        <tag>Fastp</tag>
         <tag>TopHat2</tag>
         <tag>Cufflinks</tag>
         <tag>HTSeq</tag>
@@ -85,8 +96,8 @@
         <category>RNA-seq</category>
       </categories>
       <tags>
-        <tag>报错解决</tag>
         <tag>HISAT2</tag>
+        <tag>报错解决</tag>
       </tags>
   </entry>
   <entry>
@@ -129,7 +140,7 @@
   <entry>
     <title><![CDATA[During 12.22-12.24]]></title>
     <url>%2FPoetry%2F12.22-12.24%E6%9C%89%E6%84%9F%E8%80%8C%E5%86%99%E7%9A%84%E8%AF%97.html</url>
-    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-MaZbXqWy"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-uZVTFBeO"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>
@@ -193,8 +204,8 @@
         <category>RNA-seq</category>
       </categories>
       <tags>
-        <tag>Quality control</tag>
         <tag>Fastp</tag>
+        <tag>Quality control</tag>
       </tags>
   </entry>
 </search>
