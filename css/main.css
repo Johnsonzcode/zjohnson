@@ -2030,7 +2030,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3ce2e9;
+  background: #41ffaa;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3062,7 +3062,7 @@ hr {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 body {
-  background: url("https://blog-1257871194.cos.ap-beijing.myqcloud.com/Blog/Princess.jpg");
+  background: url("https://blog-1257871194.cos.ap-beijing.myqcloud.com/Blog/castle.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
