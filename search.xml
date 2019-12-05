@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[无损系统迁移]]></title>
+    <url>%2FPC-tools%2F%E6%97%A0%E6%8D%9F%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB.html</url>
+    <content type="text"><![CDATA[前言老笔记本早就想升级了，也买好了多余的固态硬盘。昨天清灰总算逮到机会了。一起就安装上了，SATA3接口的影驰240G，180左右，三年换新，还可以。起码跟机械硬盘有质的区别。 症状通过系统迁移，将系统迁移到固态硬盘了，但是固态分区的盘符是G，且可以感觉到相应的软件还是从C盘启动的。那这个固态几乎只是个摆设，显然不是我想要的。 过程这里折腾的过程没时间记录了，直接上成功的流程： 分区助手（傲梅），找到系统迁移，按提示进行，这里好像用到了PreOS。 老毛桃PE(Windows8.1)，找到引导修复工具，首先将G盘和C盘的盘符互相修改，即G改为C，C改为G，点击修复；其次点击自动修复BCD删除多余项目。 分区助手（Genius），将C盘取消激活，给SSD重建引导，激活相应的盘符。 总结折腾这些是因为不想重装系统重新安装之前收集的软件，这些折腾是重启了几十遍才完成的，还有很多次强关机。下次要想不折腾，弄清楚再完成整个流程。]]></content>
+      <categories>
+        <category>PC tools</category>
+      </categories>
+      <tags>
+        <tag>PC</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[释怀]]></title>
     <url>%2FPoetry%2F%E9%87%8A%E6%80%80.html</url>
-    <content type="text"><![CDATA[唏嘘成愁 唯黄昏而思烛明 唯覆雪始念日暖唯放手方知情真 今困苦而怀峥嵘今飘零而涌乡愁 今孑然而徒唏嘘 var ap = new APlayer({ element: document.getElementById("aplayer-siYlIVRD"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[唏嘘成愁 唯黄昏而思烛明 唯覆雪始念日暖唯放手方知情真 今困苦而怀峥嵘今飘零而涌乡愁 今孑然而徒唏嘘 var ap = new APlayer({ element: document.getElementById("aplayer-fMZijBXK"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>
@@ -75,16 +86,16 @@
         <category>RNA-seq</category>
       </categories>
       <tags>
-        <tag>Differential expression analysis</tag>
         <tag>Enrichment analysis</tag>
         <tag>KOBAS</tag>
+        <tag>Differential expression analysis</tag>
         <tag>Fastp</tag>
         <tag>Quality control</tag>
         <tag>Mapping</tag>
-        <tag>HTSeq</tag>
         <tag>Count reads</tag>
         <tag>TopHat2</tag>
         <tag>Cufflinks</tag>
+        <tag>HTSeq</tag>
         <tag>DESeq</tag>
       </tags>
   </entry>
@@ -120,9 +131,9 @@
         <category>RNA-seq</category>
       </categories>
       <tags>
+        <tag>HTSeq</tag>
         <tag>report imformation</tag>
         <tag>Samtools</tag>
-        <tag>HTSeq</tag>
       </tags>
   </entry>
   <entry>
@@ -140,7 +151,7 @@
   <entry>
     <title><![CDATA[During 12.22-12.24]]></title>
     <url>%2FPoetry%2F12.22-12.24%E6%9C%89%E6%84%9F%E8%80%8C%E5%86%99%E7%9A%84%E8%AF%97.html</url>
-    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-GCFowzKH"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-wKGrWsRi"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>
