@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[错误1923，请确认你有足够权限安装系统应用]]></title>
+    <url>%2FPC%2F%E8%A7%A3%E5%86%B3office-2010%E6%9C%AA%E5%8D%B8%E8%BD%BD%E5%AE%8C%E5%85%A8%E9%97%AE%E9%A2%98.html</url>
+    <content type="text"><![CDATA[问题在安装Office2010全家桶后，想卸载不需要的部件，用的是Windows install clean up卸载，结果这软件是强制卸载，并不安全也不完善。造成其他部件也不能正常使用。不得已要重装。重装时遇上如题报错。 解决方案 下载MicrosoftFixit50450.msi来完全卸载office 重启 以管理员身份重装即可]]></content>
+      <categories>
+        <category>PC</category>
+      </categories>
+      <tags>
+        <tag>PC</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[无损系统迁移]]></title>
-    <url>%2FPC-tools%2F%E6%97%A0%E6%8D%9F%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB.html</url>
+    <url>%2FPC%2F%E6%97%A0%E6%8D%9F%E7%B3%BB%E7%BB%9F%E8%BF%81%E7%A7%BB.html</url>
     <content type="text"><![CDATA[前言老笔记本早就想升级了，也买好了多余的固态硬盘。昨天清灰总算逮到机会了。一起就安装上了，SATA3接口的影驰240G，180左右，三年换新，还可以。起码跟机械硬盘有质的区别。 症状通过系统迁移，将系统迁移到固态硬盘了，但是固态分区的盘符是G，且可以感觉到相应的软件还是从C盘启动的。那这个固态几乎只是个摆设，显然不是我想要的。 过程这里折腾的过程没时间记录了，直接上成功的流程： 分区助手（傲梅），找到系统迁移，按提示进行，这里好像用到了PreOS。 老毛桃PE(Windows8.1)，找到引导修复工具，首先将G盘和C盘的盘符互相修改，即G改为C，C改为G，点击修复；其次点击自动修复BCD删除多余项目。 分区助手（Genius），将C盘取消激活，给SSD重建引导，激活相应的盘符。 总结折腾这些是因为不想重装系统重新安装之前收集的软件，这些折腾是重启了几十遍才完成的，还有很多次强关机。下次要想不折腾，弄清楚再完成整个流程。]]></content>
       <categories>
-        <category>PC tools</category>
+        <category>PC</category>
       </categories>
       <tags>
         <tag>PC</tag>
@@ -14,7 +25,7 @@
   <entry>
     <title><![CDATA[释怀]]></title>
     <url>%2FPoetry%2F%E9%87%8A%E6%80%80.html</url>
-    <content type="text"><![CDATA[唏嘘成愁 唯黄昏而思烛明 唯覆雪始念日暖唯放手方知情真 今困苦而怀峥嵘今飘零而涌乡愁 今孑然而徒唏嘘 var ap = new APlayer({ element: document.getElementById("aplayer-fMZijBXK"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[唏嘘成愁 唯黄昏而思烛明 唯覆雪始念日暖唯放手方知情真 今困苦而怀峥嵘今飘零而涌乡愁 今孑然而徒唏嘘 var ap = new APlayer({ element: document.getElementById("aplayer-awgdfNsE"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>
@@ -69,10 +80,10 @@
   </entry>
   <entry>
     <title><![CDATA[搭建Aria2满速下载神器]]></title>
-    <url>%2FPC-Tools%2F%E6%90%AD%E5%BB%BAAria2%E6%BB%A1%E9%80%9F%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8.html</url>
+    <url>%2FPC%2F%E6%90%AD%E5%BB%BAAria2%E6%BB%A1%E9%80%9F%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8.html</url>
     <content type="text"><![CDATA[前言恰逢新装百兆宽带，无奈下载的资源仍然被限速，尤其是遇到某盘的资源。更是焦头烂额。早听闻Aria2可以完全发挥宽带潜能，但无奈搭建还是有几分复杂（其实我懒）。前几日耐着性子把它搭建好。 本地配置点击下载这是官方资源，然后选择自己的版本。需要在aria2c.exe所在目录中新建aria2.conf、aria2.session和Star.bat文件，新建download目录。 aria.conf文件参照这里设置。 aria2.session保持为空文件即可，不能启动Aria2时，删除重建。 Star.bat内容如下： 1aria2c.exe --conf=aria2.conf 需要隐藏CMD窗口新建HideRun.vbs，内容为： 1CreateObject(&quot;WScript.Shell&quot;).Run &quot;aria2c.exe的完整路径 --conf-path=aria2.conf&quot;,0 最好将下载的资源放在分区根目录，且重命名为aria2，不然容易出现未知的不能搭建的错误。 WebGUI配置这里有现成的已汉化控制台：http://aria2c.com 使用方法 双击Star.bat 打开 http://aria2c.com ，在其中添加下载任务 浏览器插件BaiduExporter：将百度云盘资源添加到Aria2下载任务中。下载器：将浏览器下载任务转移到Aria2 参考aria2使用教程Aria2 &amp; YAAW 使用说明]]></content>
       <categories>
-        <category>PC Tools</category>
+        <category>PC</category>
       </categories>
       <tags>
         <tag>Download Tool</tag>
@@ -86,11 +97,11 @@
         <category>RNA-seq</category>
       </categories>
       <tags>
-        <tag>Enrichment analysis</tag>
-        <tag>KOBAS</tag>
         <tag>Differential expression analysis</tag>
         <tag>Fastp</tag>
         <tag>Quality control</tag>
+        <tag>Enrichment analysis</tag>
+        <tag>KOBAS</tag>
         <tag>Mapping</tag>
         <tag>Count reads</tag>
         <tag>TopHat2</tag>
@@ -151,7 +162,7 @@
   <entry>
     <title><![CDATA[During 12.22-12.24]]></title>
     <url>%2FPoetry%2F12.22-12.24%E6%9C%89%E6%84%9F%E8%80%8C%E5%86%99%E7%9A%84%E8%AF%97.html</url>
-    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-wKGrWsRi"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-JeOCXxME"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>

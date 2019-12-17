@@ -1,10 +1,11 @@
-https://www.zjohnson.top/PC-tools/无损系统迁移.html
+https://www.zjohnson.top/PC/解决office-2010未卸载完全问题.html
+https://www.zjohnson.top/PC/无损系统迁移.html
 https://www.zjohnson.top/Poetry/释怀.html
 https://www.zjohnson.top/Python/Python曲线平滑处理.html
 https://www.zjohnson.top/Linux/缺少库libssl.so和libcrypto.so.html
 https://www.zjohnson.top/PC-Tools/Pycharm.html
 https://www.zjohnson.top/Bioinfomatics/RPKM、FPKM和TPM.html
-https://www.zjohnson.top/PC-Tools/搭建Aria2满速下载神器.html
+https://www.zjohnson.top/PC/搭建Aria2满速下载神器.html
 https://www.zjohnson.top/RNA-seq/RNA-seq数据初步分析流程1.html
 https://www.zjohnson.top/RNA-seq/HISAT2报错解决.html
 https://www.zjohnson.top/RNA-seq/利用IGV判断测序是否为链特异性测序.html
