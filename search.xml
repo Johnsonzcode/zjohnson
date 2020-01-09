@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[gemma GWAS分析]]></title>
+    <url>%2FGWAS%2Fgemma-GWAS%E5%88%86%E6%9E%90.html</url>
+    <content type="text"><![CDATA[链接]]></content>
+      <categories>
+        <category>GWAS</category>
+      </categories>
+      <tags>
+        <tag>全基因组关联分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[R中做正态检验]]></title>
+    <url>%2FR%2FR%E4%B8%AD%E5%81%9A%E6%AD%A3%E6%80%81%E6%A3%80%E9%AA%8C.html</url>
+    <content type="text"><![CDATA[正态检验1正态检验2]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>正态检验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[错误1923，请确认你有足够权限安装系统应用]]></title>
     <url>%2FPC%2F%E8%A7%A3%E5%86%B3office-2010%E6%9C%AA%E5%8D%B8%E8%BD%BD%E5%AE%8C%E5%85%A8%E9%97%AE%E9%A2%98.html</url>
     <content type="text"><![CDATA[问题在安装Office2010全家桶后，想卸载不需要的部件，用的是Windows install clean up卸载，结果这软件是强制卸载，并不安全也不完善。造成其他部件也不能正常使用。不得已要重装。重装时遇上如题报错。 解决方案 下载MicrosoftFixit50450.msi来完全卸载office 重启 以管理员身份重装即可]]></content>
@@ -25,7 +47,7 @@
   <entry>
     <title><![CDATA[释怀]]></title>
     <url>%2FPoetry%2F%E9%87%8A%E6%80%80.html</url>
-    <content type="text"><![CDATA[唏嘘成愁 唯黄昏而思烛明 唯覆雪始念日暖唯放手方知情真 今困苦而怀峥嵘今飘零而涌乡愁 今孑然而徒唏嘘 var ap = new APlayer({ element: document.getElementById("aplayer-awgdfNsE"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[唏嘘成愁 唯黄昏而思烛明 唯覆雪始念日暖唯放手方知情真 今困苦而怀峥嵘今飘零而涌乡愁 今孑然而徒唏嘘 var ap = new APlayer({ element: document.getElementById("aplayer-nxUirNVp"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>
@@ -97,12 +119,12 @@
         <category>RNA-seq</category>
       </categories>
       <tags>
-        <tag>Differential expression analysis</tag>
-        <tag>Fastp</tag>
-        <tag>Quality control</tag>
         <tag>Enrichment analysis</tag>
         <tag>KOBAS</tag>
+        <tag>Fastp</tag>
+        <tag>Quality control</tag>
         <tag>Mapping</tag>
+        <tag>Differential expression analysis</tag>
         <tag>Count reads</tag>
         <tag>TopHat2</tag>
         <tag>Cufflinks</tag>
@@ -162,7 +184,7 @@
   <entry>
     <title><![CDATA[During 12.22-12.24]]></title>
     <url>%2FPoetry%2F12.22-12.24%E6%9C%89%E6%84%9F%E8%80%8C%E5%86%99%E7%9A%84%E8%AF%97.html</url>
-    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-JeOCXxME"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[路途所感 瞥高山流水 噫仙雾缭绕于魔音灌耳 感思绪飞扬间始觉故里 房屋几座农家人余忆吾幼年 终日嬉戏无劳神他乡苦寒窗数载 师承先德苦栽培不知学子才尚浅 搁至此久得空闲绒雪纷飞不觉寒 道过中途迫遣返早知落雪差池生 何须改日把家还 var ap = new APlayer({ element: document.getElementById("aplayer-ClLLWyRN"), narrow: false, autoplay: false, showlrc: false, music: { title: "Let Her Go", author: "Passenger", url: "https://music.163.com/song/media/outer/url?id=18161816.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Poetry</category>
       </categories>
